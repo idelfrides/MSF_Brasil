@@ -1,0 +1,608 @@
+
+/*
+ ESTE É O ARQUIVO DE ESTILO PARA A PAGE  PRINCIPAL DECONTATO
+
+--------------------------------------------------------------------------
+                                   FONTES
+--------------------------------------------------------------------------
+UTF-8 (8-bit Unicode Transformation Format)
+é um tipo de codificação Unicode de comprimento variável
+criado por Ken Thompson e Rob Pike.
+Pode representar qualquer caracter universal padrão do Unicode,
+sendo também compatível com o ASCII.
+*/
+@charset "UTF-8";
+
+/* Utilizando fonte personalizada 1, Alegreya Sans SC */
+@font-face {
+  font-family: 'font-msf-pers_1'; /* fonte de títulos */
+/*src: url("../_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf");*/
+/*  src: url("_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-LightItalic.ttf");*/
+}
+
+/* utilizando fonte externa do google 1, Alegreya Sans, subtítulos */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+/*  font-family: 'Alegreya Sans', sans-serif;  */
+
+/* utilizando fonte externa do google 2, Raleway */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway');
+/*  font-family: 'Raleway', sans-serif;   */
+
+/*-------------------------  END FONTS --------------------------------*/
+
+
+/*General*/
+
+*{
+  margin:0px;
+  padding:0px;
+  font-family: 'Alegreya Sans', sans-serif;
+  /*font-family: 'Raleway', sans-serif; */
+}
+
+ul li{
+  display: inline-block;
+  margin-right: 25px;
+  /*font-family: 'Alegreya Sans', sans-serif;*/
+  font-weight: 200;
+
+  /*color: gray;*/
+  color: #fff;
+}
+ul.menu li a{
+ color: #FFF;
+ text-decoration: none;
+ font-weight: 500;
+ letter-spacing: -1px;
+}
+/* - ----------------- não apagar ---------------------
+ul.menu li a:hover{
+  border-bottom: 2px solid yellow;
+  border-radius: 8px;
+  font-weight: bold;
+}
+*/
+
+/* efeito do menu ao passar o mouse por cima */
+ul.menu li a:hover{
+  color: rgba(255,255,6,.8);
+  font-weight: 900;
+}
+
+/*Header*/
+
+.header{
+  height: 150px;
+  /*border-bottom:solid thin #dedede;*/
+  border-top:solid 5px seagreen;
+  background-color: #4CAF50;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* ------------------------------------------------------------------
+                         IDELFRIDES JORGE
+--------------------------------------------------------------------
+
+                  GENERAL PRONT PAGES STYLES
+/*marca o item do menu para indicar a page corrente*/
+ul.menu li.active-page-menu a{
+  color: rgba(255,255,6,.9);
+  font-weight: 900;
+}
+
+/* section entre o cabeçalho e o rodapé,
+ contém o conteúdo proncipal da page */
+section.main-content-page{
+  /*border: 2px solid black;*/
+  margin: 0 auto;         /* centralizando o conteúdo no navegador*/
+  max-width: 1200px;      /* largura máxima do layout automática*/
+  width: 90%;             /* 1080px/1200px = 90%. largura do layout: para qualquer tela(resolução), 90% */
+  height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+  margin-bottom: 30px;
+}
+
+/* cabeçalho de todas as pages */
+h1#header-intro{
+  text-transform: uppercase;
+  font-size: 3em;       /* 48px / 16px = 3em*/
+  font-style: normal;
+  color: #007236;         /*rgb(0,255,0);*/
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin-left: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  /*font-family: 'font-msf-pers_1', sans-serif, cursive;*/
+}
+
+/*------------------------------------------------------------------------
+          PRODUTOS MAIN PAGE SLTYLE BEGIN HERE
+------------------------------------------------------------------------*/
+
+/*  cabeçalho da page produtos */
+header.article-header-produtos{
+  /*border: 1px solid red;*/
+  width: auto;
+  height: auto;
+}
+
+/* menu de opções de categorias de produtos lateral,
+ alinhado à esquerda
+    OBS: page principal de dicas não possui aside;
+ */
+aside.categoria-produtos{
+  /*border: 1px solid blue;*/
+  width: 20%;             /* 240px / 1200px = 20% */
+  height: auto;        /* define Altura automática*/
+  position: relative;     /*  aside pertence ao à seção principal 'main-content-page'  */
+  margin-bottom: auto;
+}
+/* título da figura do aide */
+p#aside-fig-caption a{
+  color: #808080;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+p#aside-fig-caption a:hover{
+  color: seagreen;
+  font-weight: 500;
+}
+/* article contém todas as produtos,
+é o elemento superior, mais externo do conteúdo produtos*/
+article.article-content-produtos{
+  max-width: 100%;       /* 1080px / 1080px = 100% */
+  width: 77.6%;          /* 838,08px / 1080px = 72% */
+  height: auto;
+  margin-left: 22%;      /* 2% à esquerda(depois) do menu aside*/
+  margin-top: -27.3%;
+  margin-bottom: auto;
+  display: line-block;
+  text-align: center;  /* centraliza as imagens de produtos*/
+  position: relative;
+  padding-bottom: 2%;
+}
+
+/* section que possui a imagem e o nome do produto */
+section.product-assets{
+  display: inline-block;
+  width: 27.77777778%;  /*300px / 1080px = 27.77777778% */
+  height: auto;
+  margin-right: 20px;
+  position: relative;
+  margin-bottom: 20px;
+/*  border: 2px dotted blue;*/
+  margin-top: 0%;
+}
+
+/* divisão que contém a imagem do produto*/
+div.image-holder-produtos{
+  width: 100%;           /* 300px / 300px = 100%. */
+  height: 260px;
+}
+
+/* tornas as imagens flexíveis */
+img{
+  max-width: 100%;      /* 300px / 300px = 100%. define a largura máxima em até 100%*/
+}
+
+/* torna as imagens flexíveis */
+.image-holder-produtos figure{
+ /* width: 86.66666667%;          /* 260px / 300px = 86.66666667% */
+  width: 100%;
+}
+
+/*  cabeçalha definindo o nome do produto */
+header#list-item-header-produtos{
+  border: none;
+}
+
+/* título de nível 2 para produtos */
+
+h2.list-item-title-produtos{
+  border-bottom:none;
+  margin-top: 10px;
+  margin-bottom: auto;
+  max-width: 100%;          /* 300px / 300px = 100%;*/
+  height: auto;
+}
+
+/* define a flexibilidade de títulos de produtos*/
+
+/* título dos  produtos */
+h2.list-item-title-produtos a{
+  text-align: justify;
+  font-size: 0.75em;          /* 12px / 16px = 0.75em*/
+  text-transform: uppercase;
+  color: seagreen;
+  text-decoration: none;
+  max-width: 100%;            /*   largura máxima do título é até 300px*/
+  width: 5%;
+  font-weight: normal;
+}
+
+/* o título torna-se negrito ao passar o mouse sobre o mesmo*/
+h2.list-item-title-produtos a:hover{
+  font-weight: bold;
+}
+
+/* lista não ordenada de opçõs de produtos do menu aside(lateral) */
+ul.article-nav-links-produtos{
+  position: relative;
+  width: 100%;              /* 240px / 240px = 100% */
+  height: auto;
+}
+
+/* nome de cada categatia de produtos no menu lateral */
+ul.article-nav-links-produtos li{
+  border-bottom: 1px dotted green;
+  max-width: 93%;          /* 223,2px / 240px = 93% */
+  width: 93%;              /* 223,2px / 240px = 93% */
+  padding: 8px;
+  display: block;
+  position: relative;
+}
+
+/* o nome de cada categatia de produtos no menu lateral,
+é lincado à página do produto */
+ul.article-nav-links-produtos li a{
+  display: block;
+  color: #999;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 9pt;
+  font-weight: 500;
+  position: static;
+  max-width: 100%;          /* 240px / 240px = 100% */
+  width: 100%;              /*  240px / 240px = 100% */
+  height: auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*----- efeitos no link ao pousar o mouse sobre ------------  */
+
+ul.article-nav-links-produtos li a:hover{
+  text-decoration: none;        /* sem sublinhado no link*/
+  color: seagreen;
+  font-weight: 800;
+}
+
+ul.article-nav-links-produtos li:hover{
+  border-left: 7px solid seagreen;
+}
+
+
+/*-------------------------------------------------------------------
+                      footer style
+--------------------------------------------------------------------*/
+
+.footer{
+  /*border-top:solid thin #dedede;*/
+  border-top: solid 10px seagreen;
+  background: #007236;
+  border-bottom: solid 30px #006430;
+}
+
+/* direitos autorais do dono site*/
+.footer-copyright{
+  margin-top: 35px;
+  color: #fff;
+}
+
+/* crédito a quem criou o site*/
+.footer-copyright a{
+  text-decoration: none;
+  color: rgba(255,255,6,.5);
+ }
+
+/* ************************************************************************
+            RWD- Responsive Web Design - Media Queries
+
+    PAGE: PRODUTOS;
+
+    320 pixel – Smartphones no formato retrato com tela pequena
+    480 pixel – Smartphones no formato paisagem com tela pequena
+    768 pixel – Tablets no formato retrato, como o iPad
+    960 pixel – Tablets no formato paisagem e alguns monitores mais antigos
+    1200 pixel – Desktops, notebooks com monitores widescreen
+
+**************************************************************************/
+
+/*
+320px – Smartphones no formato retrato(portrait) com tela pequena
+ok
+**********************************************************************/
+@media screen and (max-width: 320px) and (orientation: portrait){
+  section.main-content-page{
+    width: 93%;            /* 297,6px / 320px = 93%*/
+    height: auto;
+   /* padding-bottom:  100%;*/
+    margin-bottom: 380px;
+  }
+
+  header.article-header-produtos{
+    width: 100%;         /* 297,6px / 297,6px =100%*/
+    border: 1px solid transparent;
+  }
+
+  /* cabeçalho de todas as pages */
+  h1#header-intro{
+    font-size: 2em;   /* 32px / 16px = 2em */
+  }
+
+  aside.categoria-produtos{
+    width: 100%;        /* 297,6px / 297,6px =100%*/
+    margin-top: 965px;    /*955px; */  /* posiciona o menu aside depois das imagens */
+    margin-right: 0%;
+    position: relative;
+  }
+
+  ul.article-nav-links-produtos{
+    width: 100%;              /* 297,6px / 297,6px =100%*/
+  }
+
+  ul.article-nav-links-produtos li a{
+    width: 100%;              /* 297,6px / 297,6px =100%*/
+  }
+
+  article.article-content-produtos{
+    width: 99%;         /*  313.6px / 320.6px = 98%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: -1292px;   /* -430% = -1265px */
+  }
+
+  section.product-assets{
+    width: 99%;
+    text-align: center;   /* centraliza as imagens */
+  }
+
+  div.image-holder-produtos{
+    width: 100%;           /* 297,6px / 297,6px =100%*/
+  }
+
+}
+
+/*************************************************************************
+480px – Smartphones no formato paisagem(landscape) com tela pequena
+*************************************************************************/
+@media screen and (min-width: 321px) and (max-width: 480px) {
+ /*and (orietation: landscape)*/
+  section.main-content-page{
+    width: 93%;         /* 297,6px / 320px = 93%*/
+    height: auto;
+    margin-bottom:  380px;/* 68.6666666%; */
+  }
+
+  header.article-header-produtos{
+    width: 100%;
+    border: 1px solid transparent;*/
+  }
+
+  h1#header-intro{
+    font-size: 2em;   /* 32px / 16px = 2em */
+  }
+
+  aside.categoria-produtos{
+    width: 100%;      /*  200px / 480px = 41.666666666666666666666666666667%*/
+    margin-top: 965px;     /*955px; */  /* posiciona o menu aside depois das imagens */
+  }
+
+  figure.aside-nav-figure img{
+    height: 160px;
+  }
+
+  ul.article-nav-links-produtos{
+    width: 100%;              /* 240px / 240px = 100% */
+  }
+
+  ul.article-nav-links-produtos li a{
+    width: 100%;              /* 240px / 240px = 100% */
+  }
+
+  article.article-content-produtos{
+    width: 100%;         /*  313.6px / 313.6px = 100%*/
+    margin-left: auto;
+    margin-top: -1283px /*-286.66666%;   */
+  }
+  section.product-assets{
+    width: 100%;           /*313.6px / 320px = 98% */
+    margin-right: 0%;
+    text-align: center;   /* centraliza as imagens */
+  }
+
+  div.image-holder-produtos{
+    width: 100%;           /* 320px / 320px = 100%. */
+  }
+
+}
+
+/*******************************************************************
+768px – Tablets no formato retrato(portrait) como o iPad
+*******************************************************************/
+
+@media screen and (min-width: 481px) and (max-width: 768px) { /*and (orientation: portrait){ */
+  section.main-content-page{
+    width: 93%;         /* 714,24px / 768px = 93%*/
+    height: auto;
+    margin-bottom: 380px; /* 80%;*/
+  }
+
+  header.article-header-produtos{
+    width: 100%;
+    border: 1px solid transparent;
+  }
+
+  h1#header-intro{
+    font-size: 2.5em;      /* 40px / 16px = 2.5em */
+  }
+
+  aside.categoria-produtos{
+    width: 100%;      /*  200px / 480px = 41.666666666666666666666666666667%*/
+    margin-top: 650px     /*955px; */  /* posiciona o menu aside depois das imagens */
+    /*margin-bottom: 95px;*/
+  }
+
+  figure.aside-nav-figure img{
+    height: 170px;
+  }
+
+  ul.article-nav-links-produtos{
+    width: 100%;              /* 240px / 240px = 100% */
+  }
+
+  ul.article-nav-links-produtos li a{
+    width: 100%;              /* 240px / 240px = 100% */
+  }
+
+  article.article-content-produtos{
+    width: 100%;         /*  313.6px / 313.6px = 100%*/
+    margin-left: auto;
+    margin-top: -978px;
+  }
+
+  section.product-assets{
+    width: 45%;
+    margin-left: 0%;
+    margin-right: 2%;
+    height: auto;
+    text-align: center;   /* centraliza as imagens de produtos*/
+    margin-top: 0%;
+  }
+
+  div.image-holder-produtos{
+    width: 100%;           /* 320px / 320px = 100%. */
+    height: auto;
+  }
+
+  div.image-holder-produtos figure{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/*******************************************************************
+960px – Tablets no formato paisagem(ladscape)
+e alguns monitores mais antigos
+********************************************************************/
+
+@media screen and (min-width: 769px) and (max-width: 960px) and (orientation: landscape){
+  section.main-content-page{
+    width: 93%;         /* 714,24px / 768px = 93%*/
+    height: auto;
+    margin-bottom: 380px;
+  }
+
+  header.article-header-produtos{
+    width: 100%;
+    border: 1px solid transparent;
+  }
+
+  h1#header-intro{
+    font-size: 2.5em;      /* 40px / 16px = 2.5em */
+  }
+
+  aside.categoria-produtos{
+    width: 99%;
+    margin-top: 340.2px;  /*95%;     /*955px; */  /* posiciona o menu aside depois das imagens */
+    /*margin-bottom: 95px;*/
+  }
+
+  figure.aside-nav-figure img{
+    height: 200px;         /* aumenta a altura da imagem do aside*/
+  }
+
+  figcaption p{
+    text-align: center;
+  }
+
+  ul.article-nav-links-produtos{
+    width: 100%;              /* 240px / 240px = 100% */
+  }
+
+  ul.article-nav-links-produtos li a{
+    width: 100%;              /* 240px / 240px = 100% */
+  }
+
+  article.article-content-produtos{
+     width: 99%;         /*  313.6px / 313.6px = 100%*/
+     margin-left: auto;
+     margin-top: -692px; /* -145%   /* deslocamento do aside mais o*/
+     position: relative;
+  }
+
+  section.product-assets{
+    width: 29%;
+    margin-left: 0%;
+    height: auto;
+    text-align: center;   /* centraliza as imagens de produtos*/
+    margin-top: 0%;
+  }
+
+  div.image-holder-produtos{
+    width:100%;           /* 320px / 320px = 100%. */
+    height: auto;
+  }
+
+  div.image-holder-produtos figure{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/*********************************************************************
+1200px – Desktops, notebooks com monitores widescreen,
+orientação paisagem  ok
+*********************************************************************/
+@media screen and (min-width: 961px) and (max-width: 1334px) and (orientation: landscape){
+  section.main-content-page{
+    width: 93%;         /* 714,24px / 768px = 93%*/
+    height: auto;
+    height: 475px;
+  }
+
+  header.article-header-produtos{
+    width: 100%;
+  }
+
+  h1#header-intro{
+    font-size: 2.5em;      /* 40px / 16px = 2.5em */
+  }
+
+  aside.categoria-produtos{
+    width: 20%;             /*  240x / 1200px = 20%*/
+    /*margin-top: 95%;      /*955px; */  /* posiciona o menu aside depois das imagens */
+    /*margin-bottom: 95px;*/
+    height: auto;
+    text-align: left;
+  }
+
+  figure.aside-nav-figure img{
+    width: 100%;        /* ajusta a imagem à largura do aside*/
+    height: 25%;      /*   */
+  }
+
+  ul.article-nav-links-produtos{
+    width: 100%;              /* 240px / 240px = 100% */
+  }
+
+  ul.article-nav-links-produtos li a{
+    width: 100%;              /* 240px / 240px = 100% */
+  }
+
+  article.article-content-produtos{
+     width: 77.5%;
+     height: auto;
+     margin-top:  -290px;  /* posiciona as imagens de produtos  na     mesma    linha do aside*/
+     position: relative;
+     margin-bottom: 10px;
+     /*border: 2px solid #000;**/
+  }
+}

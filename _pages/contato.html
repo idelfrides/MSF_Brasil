@@ -1,0 +1,109 @@
+<!DOCTYPE html5>
+<html>
+<head>
+  <title>Contato</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset = "utf-8">
+  <link rel="shortcut icon" type="image/png" href="../_images/favicon_msf.png" />
+
+  <style type="text/css">
+    @import url("../nwitter/_css/estilo_contato.css");
+  </style>
+
+  <script
+    type="text/javascript" src="../_javascript/limpa_campo.js">
+  </script>
+  <script
+    type="text/javascript" src="../_javascript/limpa_campo2.js">
+  </script>
+</head>
+<body onpageshow="limpa_campo2()">
+  <!--
+    onload="limpa_campo()"
+    onload="limpa_campo2()"
+
+  -->
+<section class = "header">
+  <div class = "logo">
+    <a href="../home.html" title="MSF-Brasil, Amigo do meio ambiente" alt="logotipo MSF-Brasil"><img src = "../_images/logo_3.png" width="115" height="104"  style="position:relative; float:left; left:150px; top:15px;"></a></div>
+  <div class = "menu" style="float:right; position:relative; margin-right:10%; top:100px;">
+    <ul class="menu">
+      <li><a href="../home.html">INÍCIO</a></li>
+      <li><a href="produtos.html">PRODUTOS</a></li>
+      <li><a href="about.html">QUEM SOMOS</a></li>
+      <li><a href="dicas.html">DICAS</a></li>
+      <li class="active-page-menu"><a href="#">CONTATO</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="main-content-page">
+    <header class="header-contact">
+      <h1 class="header-intro">contato</h1>
+    </header>
+
+    <div class="general-intro-form">
+      <p id="contact-intro">Dúvidas, sugestões, críticas são bem-vindas! .<br> É sua opinião que nos ajuda a desenvolver produtos cada vez melhores para atendê-lo(a).<br> Fale conosco. Será uma grande satisfação!</p>
+
+      <p id="aviso"> <strong>OBSERVAÇÃO: </strong>&nbsp; Os campos <span style="text-decoration:underline;">Nome completo, Endereco, Email e Mensagem</span> <strong>sao obrigatorios!</strong> </p>
+
+      <form action="../data_base/contact_user.php" method="post" id="form-group" class="contact-form-group">
+        <!--<fieldset id="campos-contato"> -->
+            <div class="contact-form-group">
+              <input class="input-fd" type="text" name="nome" placeholder="Nome completo">
+            </div>
+            <div class="contact-form-group">
+              <input  class="input-fd" type="text" name="adress" placeholder="Endereço" maxlength="200">
+            </div>
+            <div class="contact-form-group">
+              <input class="input-fd" type="email" class="contact-form-group" id="e-mail" placeholder="Email" name="email">
+            </div>
+            <div class="contact-form-group">
+              <input class="input-fd" type="tel" class="contact-form-group"  placeholder="Contato" name="phone">
+            </div>
+            <div class="contact-select-group">
+              <h5 id="select-legend">Assunto</h5>
+              <select name="assunto" id="select-options" required>
+                <option value=" ">ESCOLHA UMA OPCAO</option>
+                <option value="Duvida">Dúvida</option>
+                <option value="Reclamacao">Reclamação</option>
+                <option value="Sugestao">Sugestão</option>
+                <option value="Negocio">Negócio</option>
+                <option value="Parceria">Parceria</option>
+                <option value="Elogio">Elogio</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+            <div class="textarea-submit" id="contact-textarea-group">
+              <textarea id="t-area" name="sms"  placeholder="Mensagem" maxlength="5000"></textarea>
+           <!-- </div>  rows="1" cols="55"
+            <div class="textarea-submit" id="space-botao-envio"> -->
+               <input id="botao-envio" type="submit" value="enviar" >
+            </div>
+        <!--</fieldset>-->
+      </form>
+    </div>
+</section>
+
+
+<!-- section defines footer -->
+  <section class = "footer" style="height:300px;">
+    <div class = "icon" align = "center">
+      <a href="../home.html" title="MSF-Brasil, Amigo do meio ambiente" alt="logotipo MSF-Brasil"><img src = "../_images/logo_3.png" width="115" height="104"  style = "margin-top:45px;"></a></div>
+      <div align="center" style = "margin-top:25px;">
+      <ul class="menu">
+        <li><a href="../home.html">INÍCIO</a></li>
+        <li><a href="produtos.html">PRODUTOS</a></li>
+        <li><a href="about.html">QUEM SOMOS</a></li>
+        <li><a href="dicas.html">DICAS</a></li>
+        <li class="active-page-menu"><a href="#">CONTATO</a></li>
+      </ul>
+    </div>
+
+  <div class="footer-copyright" align="center" id="copyright">
+    <p>Copyright &copy MSF Brasil. Todos os direitos reservados. | Desenvolvido por <a href="http://www.loadingjr.com.br/" target="_blank">Loading Desenvolvimento Jr</a></p>
+  </div>
+</section>
+
+</body>
+</html>

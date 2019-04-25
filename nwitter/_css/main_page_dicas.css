@@ -1,0 +1,631 @@
+/*
+ ESTE É O ARQUIVO DE ESTILO DA  PAGE PRINCIPAL DE DICAS
+
+--------------------------------------------------------------------------
+                                   FONTES
+--------------------------------------------------------------------------
+UTF-8 (8-bit Unicode Transformation Format)
+é um tipo de codificação Unicode de comprimento variável
+criado por Ken Thompson e Rob Pike.
+Pode representar qualquer caracter universal padrão do Unicode,
+sendo também compatível com o ASCII.
+*/
+@charset "UTF-8";
+
+/* Utilizando fonte personalizada 1, Alegreya Sans SC */
+@font-face {
+  font-family: 'font-msf-pers_1'; /* fonte de títulos */
+/*src: url("../_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf");*/
+/*  src: url("_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-LightItalic.ttf");*/
+}
+
+/* utilizando fonte externa do google 1, Alegreya Sans, subtítulos */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+/*  font-family: 'Alegreya Sans', sans-serif;  */
+
+/* utilizando fonte externa do google 2, Raleway */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway');
+/*  font-family: 'Raleway', sans-serif;   */
+
+/*-------------------------  END FONTS --------------------------------*/
+
+/*General*/
+
+*{
+  margin:0px;
+  padding:0px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+ul li{
+  display: inline-block;
+  margin-right: 25px;
+  font-family: arial;
+  font-weight: 200;
+  color: #fff;
+}
+ul.menu li a{
+ color: #FFF;
+ text-decoration: none;
+ font-weight: 500;
+ letter-spacing: -1px;
+/* font-family: 'Raleway', sans-serif;*/
+}
+
+/* efeito do menu ao passar o mouse por cima */
+ul.menu li a:hover{
+  color: rgba(255,255,6,.8);
+  font-weight: 900;
+}
+
+/*
+ul.menu li a:hover{
+  border-bottom: 2px solid yellow;
+  border-radius: 8px;
+  font-weight: bold;
+}
+*/
+
+.header{
+  height: 150px;
+  /*border-bottom:solid thin #dedede;*/
+  border-top:solid 5px seagreen;
+  background-color: #4CAF50;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* ---------------------------------------------------------------------
+                            IDELFRIDES JORGE
+------------------------------------------------------------------------*/
+
+
+/*marca o item do menu para indicar a page corrente*/
+ul.menu li.active-page-menu a{
+  color: rgba(255,255,6,.9);
+  font-weight: 900;
+}
+/* section entre o cabeçalho e o rodapé,
+ contém o conteúdo proncipal da page */
+section.main-content-page{
+  /*border: 2px solid black; */
+  margin: 0 auto;         /* centralizando o conteúdo no navegador*/
+  max-width: 1200px;      /* largura máxima do layout automática*/
+  width: 90%;             /* 1080px/1200px = 90%. largura do layout: para qualquer tela(resolução), 90% */
+  height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+  margin-bottom: 30px;
+}
+
+header.page-header{
+  width:  60%;  /*70.8333333333%;*/
+  height: auto;
+  margin-left: 6%;
+}
+
+/* cabeçalho de todas as pages */
+h1#header-intro{
+  text-transform: uppercase;
+  font-size: 3.0em;       /* 48px / 16px = 3em*/
+  color: #007236;         /*rgb(0,255,0);*/
+  text-align: left;
+  margin-left: auto;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  font-weight: 900;
+  letter-spacing: -5px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* ------------------------------------------------------------------
+              DICAS MAIN PAGE SLTYLE BEGIN HERE
+---------------------------------------------------------------------
+
+        08 de março de 2017
+        Fluidez da page principal de dicas
+*/
+/*  area principal q contém todas as dicas*/
+div.dica-content-area{
+  max-width: 100%;
+  width: 100%;        /* 1080px/1080px = 100%. largura do layout:
+                        para qualquer tela(resolução), 100% */
+  height: auto;
+  position: relative;
+  margin-bottom: auto;
+  text-align: center;
+  padding-left: 0%;
+}
+
+/* que contém conteúdo total de cada dica */
+section.list-item-dica-single{
+       display: inline-block;
+       width: 27.3333333333%;       /* 360px/1080px = 33.3333333333% - 4 = 29.3333333333%*/
+       height: auto;
+       margin-right: 2%;
+       position: relative;
+       margin-bottom: 10px;
+       margin-top: 0px;
+}
+/* -------------------------------------------------------------------
+ aside nemu of dicas page list */
+ul.article-nav-links-dicas{
+  background-color: transparent;  /* rgba(225,255,0,.7);*/
+  width: auto;
+  height: auto;
+  list-style-type: none;    /*  sem marcação dos itens da lista do aside */
+  display: block;
+}
+
+/* aside nemu for dicas page links*/
+ul.article-nav-links-dicas li a{
+  list-style-type: none;   /*  sem marcação dos itens da lista do aside */
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-style: normal;
+  color: #007236; /*rgb(0,0,0);*/
+  text-align: left;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+/* ----------------------------------------------------------------------*/
+
+/* imagem do item da page dicas */
+div.image-holder{
+  width: 100%;         /* 360px/1080px = 33.3333333333% - 4 = 29.3333333333%*/
+  height: 150px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* torna as imagens flexíveis */
+img{
+     max-width: 100%;
+}
+
+/* torna as imagens flexíveis */
+.image-holder figure{
+     width: 100%;
+}
+
+/* cabeçalho das dicas */
+div.list-item-header h2{
+  margin-top:0%;
+  width: 100%;             /* 360px / 360px=100% */
+  height:auto;
+  margin-left: 0px;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  text-align: left;
+  border-bottom: 1px dotted seagreen;
+}
+
+/* Título da imagem do produto */
+h2.list-item-title a{
+  text-align: left;
+  font-size: 1em;     /* 12px / 16px = 0.75em */
+  text-transform: uppercase;
+  color: seagreen;
+  text-decoration: none;
+  width: 100%;              /* 360px / 360px = 100% */
+  height: auto;
+  font-weight:600;
+  letter-spacing: -2px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* o título torna-se negrito, ao cpassar o mouse sobre o mesmo*/
+h2.list-item-title a:hover{
+  font-weight: bold;
+}
+
+/* div pra o texto introdutório de cada diga*/
+div.list-item-body{
+  width: 100%;        /* 360px / 360px = 100% */
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* texto introdutório da dica*/
+div.list-item-body p{
+  text-align: justify;
+  font-size: 10pt;
+  text-decoration: none;
+  max-width: 68,05555555555%;      /* 245px / 360px = 68,055555555555555555555555555556% */
+  width: 68%;
+  height: auto;
+  margin-left: 40px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+p.list-item-body{
+  color: #808080;
+  font-size:  14px;
+  line-height: 1.42857143;
+  font-weight: 500;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Raleway', sans-serif;
+}
+
+/*footer*/
+
+.footer{
+  /*border-top:solid tin #dedede;*/
+  border-top: solid 10px seagreen;
+  background: #007236;
+  border-bottom: solid 30px #006430;
+}
+.footer-copyright{
+  margin-top: 35px;
+  color: #fff;
+}
+.footer-copyright a{
+    text-decoration: none;
+    color: rgba(255,255,6,.7);
+}
+
+
+/* ***************************************************************************
+            RWD- Responsive Web Design - Media Queries
+
+     -----------      PAGE: DICAS FRONT PAGE   ------------------
+
+    320 pixel – Smartphones no formato retrato com tela pequena
+    480 pixel – Smartphones no formato paisagem com tela pequena
+    768 pixel – Tablets no formato retrato, como o iPad
+    960 pixel – Tablets no formato paisagem e alguns monitores mais antigos
+    1200 pixel – Desktops, notebooks com monitores widescreen
+
+*******************************************************************************
+*/
+
+/*
+320px – Smartphones no formato retrato(portrait) com tela pequena
+ok
+**********************************************************************/
+@media screen and (max-width:320px) and (orientation: portrait){
+
+  section.main-content-page{
+   /* margin: 0 auto; */
+    width: 93%;            /* 297,6px / 320px = 93%*/
+    height: auto;
+    padding-bottom: 0px;/* 100%;  */
+  }
+
+  header.page-header{
+    width: 100%;         /* 297,6px / 297,6px =100%*/
+    /*border: 2px solid red;*/
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* cabeçalho de todas as pages */
+  h1#header-intro{
+    font-size: 2em;   /* 32px / 16px = 2em */
+  }
+
+  div.dica-content-area{
+    /*border: 2px dashed blue;
+    max-width: 100%;*/
+    width: 99%;           /* 1080px/1080px = 100%. largura do layout:
+                          para qualquer tela(resolução), 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  section.list-item-dica-single{
+    width: 100%;
+    text-align: center;   /* centraliza as imagens */
+  }
+
+  div.image-holder{
+    width: 98%;           /* 297,6px / 297,6px =100%*/
+  }
+
+  div.image-holder figure{
+    width: 100%;           /* 297,6px / 297,6px =100%*/
+  }
+
+  h2.list-item-title a{
+    font-size: 0.625em;     /* 11px / 16px = 0.75em */
+    letter-spacing: 0px;
+  }
+
+  div.list-item-body p{
+    width:95%;
+    margin-left: 2%;
+    margin-right: 0%;
+    /*border: 1px solid black;*/
+  }
+}
+
+/*************************************************************************
+480px – Smartphones no formato paisagem(landscape) com tela pequena
+*************************************************************************/
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  section.main-content-page{
+    width: 93%;            /* 297,6px / 320px = 93%*/
+    height: auto;
+    padding-bottom: 0px;/* 100%;  */
+  }
+
+  header.page-header{
+    width: 100%;         /* 297,6px / 297,6px =100%*/
+    /*border: 2px solid red;*/
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* cabeçalho de todas as pages */
+  h1#header-intro{
+    font-size: 2em;   /* 32px / 16px = 2em */
+  }
+
+  div.dica-content-area{
+    /*border: 2px dashed blue;
+    max-width: 100%;*/
+    width: 99%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  section.list-item-dica-single{
+    width: 100%;
+    text-align: center;   /* centraliza as imagens */
+  }
+
+  div.image-holder{
+    width: 100%;           /* 297,6px / 297,6px =100%*/
+  }
+
+  div.image-holder figure{
+    width: 98%;           /* 297,6px / 297,6px =100%*/
+  }
+
+  div.list-item-header h2{
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    text-align: center;
+  }
+  h2.list-item-title a{
+    font-size: 0.625em;     /* 11px / 16px = 0.75em */
+    letter-spacing: 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+  div.list-item-body{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    /*border: 1px solid black;*/
+  }
+
+  div.list-item-body p{
+   width:100%;
+   position: relative;
+   text-align: justify;
+   margin-left: 0%;
+   margin-right: 0%;
+  }
+}
+
+/*******************************************************************
+768px – Tablets no formato retrato(portrait) como o iPad
+*******************************************************************/
+
+@media screen and (min-width: 481px) and (max-width: 768px) { /*and (orientation: portrait){ */
+  section.main-content-page{
+    width: 93%;            /* 297,6px / 320px = 93%*/
+    height: auto;
+    padding-bottom: 0px;/* 100%;  */
+  }
+
+  header.page-header{
+    width: 100%;         /* 297,6px / 297,6px =100%*/
+    /*border: 2px solid red;*/
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* cabeçalho de todas as pages */
+  h1#header-intro{
+    font-size: 2em;   /* 32px / 16px = 2em */
+  }
+
+  div.dica-content-area{
+    /*border: 2px dashed blue;
+    max-width: 100%;*/
+    width: 99%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  section.list-item-dica-single{
+    width: 40%;
+    text-align: center;   /* centraliza as imagens */
+  }
+
+  div.image-holder{
+    width: 99%;           /* 297,6px / 297,6px =100%*/
+  }
+
+  div.image-holder figure{
+    width: 100%;           /* 297,6px / 297,6px =100%*/
+  }
+
+  div.list-item-header h2{
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    text-align: left;
+  }
+  h2.list-item-title a{
+    font-size: 0.875em;     /* 11px / 16px = 0.75em */
+    letter-spacing: -1px;
+    text-align: center;
+    width: 100%;
+  }
+
+  div.list-item-body{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    /*border: 1px solid black;*/
+  }
+
+  div.list-item-body p{
+    width: 100%;
+    position: relative;
+    text-align: justify;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+ }
+
+/*******************************************************************
+960px – Tablets no formato paisagem(ladscape)
+e alguns monitores mais antigos
+********************************************************************/
+
+@media screen and (min-width: 769px) and (max-width: 960px) and (orientation: landscape){
+
+  section.main-content-page{
+    width: 93%;            /* 297,6px / 320px = 93%*/
+    height: auto;
+    padding-bottom: 0px;/* 100%;  */
+  }
+
+  header.page-header{
+    width: 100%;         /* 297,6px / 297,6px =100%*/
+    /*border: 2px solid red;*/
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* cabeçalho de todas as pages */
+  h1#header-intro{
+    font-size: 2.5em;   /* 40px / 16px = 2em */
+  }
+
+  div.dica-content-area{
+    /*border: 2px dashed blue;
+    max-width: 100%;*/
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: auto;
+    display: inline-block;
+  }
+
+  section.list-item-dica-single{
+    width: 31%;
+    height: auto;
+    text-align: center;   /* centraliza as imagens */
+    margin-right: 5px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  div.image-holder{
+    width: 100%;
+    height: 150px;           /* 297,6px / 297,6px =100%*/
+  }
+
+  div.image-holder figure{
+    width: 100%;           /* 297,6px / 297,6px =100%*/
+  }
+
+  h2.list-item-title a{
+    font-size: 0.75em;     /* 12px / 16px = 0.75em */
+  }
+
+  div.list-item-body{
+     width: 80%;
+     height: auto;
+     margin-left: 10%;
+     margin-right: 10%;
+     /*border: 1px solid black;*/
+  }
+
+div.list-item-body p{
+     width:100%;
+     position: relative;
+     text-align: justify;
+     margin-left: 0%;
+     margin-right: 0%;
+}
+
+}
+/*********************************************************************
+1200px – Desktops, notebooks com monitores widescreen,
+orientação paisagem  ok
+*********************************************************************/
+@media screen and (min-width: 961px) and (max-width: 1334px) and (orientation: landscape){
+  section.main-content-page{
+    width: 93%;            /* 297,6px / 320px = 93%*/
+    height: auto;
+    padding-bottom: 0px;/* 100%;  */
+  }
+
+  header.page-header{
+    width: 100%;         /* 297,6px / 297,6px =100%*/
+    /*border: 2px solid red;*/
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* cabeçalho de todas as pages */
+  h1#header-intro{
+    font-size: 2.5em;   /* 40px / 16px = 2em */
+  }
+
+  div.dica-content-area{
+    /*border: 2px dashed blue;
+    max-width: 100%;*/
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: auto;
+    display: inline-block;
+  }
+
+  section.list-item-dica-single{
+    width: 31%;
+    height: auto;
+    text-align: center;   /* centraliza as imagens */
+    margin-right: 5px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  div.image-holder{
+    width: 100%;
+    height: 150px;           /* 297,6px / 297,6px =100%*/
+  }
+
+  div.image-holder figure{
+    width: 100%;           /* 297,6px / 297,6px =100%*/
+  }
+
+  h2.list-item-title a{
+    font-size: 0.75em;     /* 12px / 16px = 0.75em */
+  }
+
+  div.list-item-body{
+    width:90%;
+    height:auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    /*border: 1px solid black;*/
+  }
+
+  div.list-item-body p{
+    width:100%;
+    margin-left: 0%;
+    text-align: justify;
+  }
+}

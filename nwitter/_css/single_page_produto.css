@@ -1,0 +1,838 @@
+/*
+ESTE ARQUIVO  TRATA ESTILO DAS PAGES INDIVIVUAIS DAS PRODUTOS
+*/
+/*
+UTF-8 (8-bit Unicode Transformation Format)
+é um tipo de codificação Unicode de comprimento variável
+criado por Ken Thompson e Rob Pike.
+Pode representar qualquer caracter universal padrão do Unicode,
+sendo também compatível com o ASCII.
+*/
+@charset "UTF-8";
+
+/* Utilizando fonte personalizada 1, Alegreya Sans SC */
+@font-face {
+  font-family: 'font-msf-pers_1';   /* fonte de títulos */
+  src: url("../../_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-ExtraBoldItalic.ttf");
+}
+
+/* utilizando fonte externa do google 1, Alegreya Sans, subtítulos */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+/*  font-family: 'Alegreya Sans', sans-serif;  */
+
+/* utilizando fonte externa do google 2, Raleway */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway');
+/*  font-family: 'Raleway', sans-serif;   */
+
+
+/*General*/
+
+*{
+  margin:0px;
+  padding:0px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+ul li{
+  display: inline-block;
+  margin-right: 25px;
+ font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 500;
+  color: #FFF;
+}
+
+ul.menu li a{
+ color: #FFF;
+ text-decoration: none;
+ font-weight: 500;
+ letter-spacing: -1px;
+}
+
+/* efeito do menu ao passar o mouse por cima */
+ul.menu li a:hover{
+     color: rgba(255,255,6,.8);
+     font-weight: 900;
+}
+/*
+ul.menu li a:hover{
+  border-bottom: 2px solid yellow;
+  border-radius: 8px;
+  font-weight: bold;
+}
+*/
+
+/*Header*/
+.header{
+  height: 150px;
+  /*border-bottom:solid thin #dedede;*/
+  border-top:solid 5px seagreen;
+  background-color: #4CAF50;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/*footer*/
+.footer{
+  border-top: solid 10px seagreen;
+  background: #007236;
+  border-bottom: solid 30px #006430;
+}
+.footer-copyright{
+  margin-top: 35px;
+  color: #fff;
+}
+.footer-copyright a{
+  text-decoration: none;
+  color: rgba(255,255,6,.7);
+ }
+
+
+/*------------------------------------------------------------------
+                        PRODUTOS SINGLE PAGES
+ ------------------------------------------------------------------*/
+
+ /*marca o item do menu para indicar a page corrente*/
+ ul.menu li.active-page-menu a{
+   color: rgba(255,255,6,.9);
+   font-weight: 900;
+ }
+
+/* section entre o cabeçalho e o rodapé- contém o conteúdo proncipal da page */
+section.main-content-page{
+  /*border: 2px solid black;*/
+  margin: 0 auto;         /* centralizando o conteúdo no navegador*/
+  max-width: 1200px;      /* largura máxima do layout automática*/
+  width: 90%;             /* 1080px/1200px = 90%. largura do layout: para qualquer tela(resolução), 90% */
+  height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+  margin-bottom: auto;
+}
+
+header.article-header-produtos{
+  height: auto;
+  width: 20%;         /* 240px / 1200px = 20% */
+}
+
+/* cabeçalho de todas as pages */
+h1#header-intro{
+  text-transform: uppercase;
+  font-size: 3em;
+  font-style: normal;
+  color: #007236;        /* rgb(0,255,0);*/
+  text-align: left;
+  margin-top: 40px ;
+  margin-bottom: 60px;
+  font-weight: 900;
+  margin-left: auto;
+  letter-spacing: -5px;
+  font-family: 'Alegreya Sans', sans-serif;
+  /*font-family:  'font-msf-pers_1',  sans-serif;*/
+  /*font-family: 'Raleway', sans-serif;*/
+}
+
+/* menu de opções de categorias de produtoslateral,
+ alinhado à esquerda*/
+aside.categoria-produtos{
+  width: 20%;            /* 240px / 1200px = 20% */
+  position: relative;    /*  aside pertence ao à seção principal 'main-content-page'  */
+}
+
+/* lista não ordenada de opçõs de produtos do menu aside(lateral) */
+ul.article-nav-links-produtos{
+  /*border: 0.1px dotted green;*/
+  position: relative;
+  width: 100%;     /*240px / 240px = 100% */
+  height: auto;
+}
+
+/* nome de cada categatia de produtos no menu lateral */
+ul.article-nav-links-produtos li{
+  border-bottom: 1px dotted green;
+  max-width: 93%;      /* 223,2px / 240px = 93% */
+  width: 93%;          /* 223,2px / 240px = 93% */
+  padding: 8px;
+  display: block;
+  position: relative;
+}
+
+/* o nome de cada categatia de produtos no menu lateral,
+é lincado à página do produto */
+ul.article-nav-links-produtos li a{
+  display: block;
+  color: #808080;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 9pt;
+  font-weight: 500;
+  position: static;
+  max-width: 100%;      /* 240px / 240px = 100%*/
+  width: 100%;         /*  240px / 240px = 100%*/
+  height: auto;
+  margin-bottom: auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ----------- efeitos no link ao pousar o mouse sobre --------------- */
+
+ul.article-nav-links-produtos li a:hover{
+  text-decoration: none;        /* sem sublinhado no link*/
+  color: #000;
+}
+
+ul.article-nav-links-produtos li:hover{
+  border-left: 7px solid seagreen;
+}
+
+/*  Mantém uma cor de fundo sobre o item para indicar
+ o produto em visualização (o contexto)*/
+ul.article-nav-links-produtos li.active{
+  text-decoration: none;        /* sem sublinhado no link*/
+  /*background-color: lightgray; */ /* #d3d3d3;*/ /*cor de fundo cinza clara*/
+  border-left: 7px solid seagreen;                 /* sem borda*/
+}
+
+/* troca a cor da fonte pra VERDE SEAGREEN */
+ul.article-nav-links-produtos li.active a{
+  color: seagreen;
+  font-weight: 800;
+}
+
+/*-------------------------------------*/
+
+/* As pages individuas de produtos */
+article.article-content-produtos-single{
+  /*border: 1px dashed red;*/
+  width: 78%;               /* 842,4px / 1080px = 78%: 78% - 22% = 56% => 604.8px*/
+  height: auto;
+  margin-left: 22%;
+  margin-top: -145px;
+  margin-bottom: auto;
+  position: relative;
+  margin-right: 0%;
+}
+
+/* cabeçalho das pages individuas de produtos */
+section.article-header-produtos-single{
+  max-width: 100%;        /* 1080px / 1080px = 100% */
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* nome do produto */
+h2.name-produto-single{
+  width: auto;
+  margin-top: 0px;
+  position: relative;
+  font-size: 2em;             /* 28,8px / 16px = 1.8em*/
+  text-transform: uppercase;
+  font-style: normal;
+  color: #007236;
+  text-align: left;
+  margin-top: 0%;
+  margin-bottom: 30px;
+  font-weight: 900;
+  margin-left: auto;
+  letter-spacing: -2px;
+  font-family: 'Alegreya Sans', sans-serif;
+  /*font-family:  'font-msf-pers_1',  sans-serif;*/
+  /*font-family: 'Raleway', sans-serif;*/
+}
+
+/* divisão que contém a imagem do produto*/
+div.image-holder{
+  width: 27.8%;     /* 260px / 842,4px = 30,86419753086% - 3% = 27.8%
+                         (esta porcentagem é q corresponde à real tam da image)*/
+  height: 260px;
+}
+
+/* torna as imagens flexíveis */
+.image-holder img{
+  max-width: 100%;           /* 842.4px / 842.4px = 100%. define a largura máxima em até 100%*/
+  max-height: 100%;          /* 260px / 260px = 100%; */
+}
+
+/* define a alrgura stática da imagem */
+.image-holder figure{
+  width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da                            div.image-holder*/
+  height: 100%;
+}
+
+/* seção de descrição e uso do produto */
+section.section-produto-descricao-uso{
+  max-width: 100%;          /* 842.4px / 842,4px = 100% */
+  width: 71.0337181337%;    /* 598,3880415582888px / 842.4px = 71.0337181337% */
+  height: auto;
+  position: relative;
+  margin-left: 28.8%;        /* 10.8px alinha a section 8% à esquerda do menu aside*/
+  margin-top: -265px;
+  margin-right: 0px;
+ }
+
+/* divisão do título e descrição do produto*/
+div.produto-title-text-desc{
+  max-width: 100%;            /* 831,6px / 831,6px = 1% */
+  height: auto;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+/* título de nível 3 para descrição do produto*/
+h3.produto-descricao-title{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.6em;           /* 22px / 16px = 1.4em */
+  text-align: justify;
+  width: 100%;                /* 831,6px / 831,6px = 100% */
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  color: #007236;
+  letter-spacing: -2px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+/*  Texto de descrição do produto*/
+p.text-produto-descricao{
+  margin-bottom: 10px;
+  text-align: justify;
+  line-height: 25px;
+  font-size: 1em;           /*  16px / 16px = 1em */
+  width: 100%;              /* 831,6px / 831,6px = 100% */
+  height: auto;
+  color: #808080;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* divisão do título de de modo de uso do produto*/
+div.produto-title-text-uso{
+  max-width: 100%;          /* 831,6px / 831,6px = 100% */
+  height: auto;
+  margin-bottom: 40px;
+}
+
+/* título de nível 3 para modo uso  do produto*/
+h3.produto-modo-uso-title{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.6em;         /* 22px / 16px = 1.4em */
+  width: 100%;              /* 831,6px / 831,6px = 100% */
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  color: #007236;
+  letter-spacing: -2px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+
+/*  Texto que desceve o modo de uso do produto*/
+p.text-produto-uso-desc{
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 25px;
+  font-size: 1em;         /* 16px / 16px = 1em */
+  width: 100%;            /* 831,6px / 831,6px = 100% */
+  height: auto;
+  color: #808080;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ************************************************************************
+            RWD- Responsive Web Design - Media Queries
+
+    320 pixel – Smartphones no formato retrato com tela pequena
+    480 pixel – Smartphones no formato paisagem com tela pequena
+    768 pixel – Tablets no formato retrato, como o iPad
+    960 pixel – Tablets no formato paisagem e alguns monitores mais antigos
+    1200 pixel – Desktops, notebooks com monitores widescreen
+
+**************************************************************************/
+
+/*
+320px – Smartphones no formato retrato(portrait)com tela pequena
+*************************************************************************/
+@media screen and (max-width: 320px) and (orientation:portrait){
+ /*(max-width: 480px) {and (orientation:portrait){*/
+
+  /* section entre o cabeçalho e o rodapé-
+   contém o conteúdo proncipal da page */
+  section.main-content-page{
+    width: 93%;                /* 297.6px/320px = 93%*/
+    height: auto;
+    padding-bottom: 40.625%;            /* 130px; / 320pc = 40,625% */
+  }
+
+  header.article-header-produtos{
+    height: auto;
+    width: 100%;         /* 240px / 1200px = 20% */
+  }
+
+  h1#header-intro{
+    font-size: 2em;     /* 32px / 16px = 2em */
+  }
+
+  /*  aside pertence ao à seção principal 'main-content-page'  */
+  aside.categoria-produtos{
+    width: 100%;            /* 320px / 320px = 100% */
+    position: relative;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* ---------------------------------------------------
+    posicionando o menu aside após os produtos
+  ------------------------------------------------------
+           ciclone casa
+  */
+   /* aside bar para ciclone casa */
+   aside#side-bar-ciclone-casa{
+     margin-top: 1465px;
+   }
+   /* article q contém todo o conteúdo do produto ciclone casa*/
+   article#content-produto-ciclone-casa{
+     margin-top:-1564px;
+   }
+
+ /* -------------------------------------------------
+          ciclone pro
+ */
+  /* aside bar para ciclone pro */
+  aside#side-bar-ciclone-pro{
+    margin-top: 1340px;
+  }
+  /* article q contém todo o conteúdo do produto ciclone pro*/
+  article#content-produto-ciclone-pro{
+    margin-top:-1439px;
+  }
+/* -----------------------------------------------
+     limpa moto
+*/
+  aside#side-bar-limpa-moto{
+    margin-top: 1020px;
+  }
+
+  /* article q contém todo o conteúdo do produto limpa moto */
+  article#content-produto-limpa-moto{
+    margin-top:-1120px;
+  }
+  /*-------------------------------------------------------*/
+
+  /* As pages individuas de produtos */
+  article.article-content-produtos-single{
+    width: 100%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top:-553%;
+    margin-bottom: auto;
+  }
+
+
+  /* cabeçalho das pages individuas de produtos */
+  section.article-header-produtos-single{
+    width: 100%;        /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 15px;
+  }
+
+  /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.3em;             /* 20,8px / 16px = 1.3em*/
+  /*  margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 10px;*/
+    margin: 15px 0% 15px 0%;
+    letter-spacing: -1px;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder{
+    /*width:81.25%;     /* 260px / 320px = 81.25%
+                   (esta porcentagem é q corresponde à real tam da image)*/
+    margin: auto;
+    text-align: center;
+    width:100%;
+  }
+
+  /* torna as imagens flexíveis */
+  div.image-holder img{
+    max-width: 100%;           /* 842.4px / 842.4px = 100%. define a largura máxima em até 100%*/
+    max-height: 100%;          /* 260px / 260px = 100%; */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-descricao-uso{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 10%;    /* margin-top: -28%; */
+  }
+
+
+  /* divisão do título e descrição do produto*/
+  div.produto-title-text-desc{
+    max-width: 100%;            /* 831,6px / 831,6px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* divisão do título e nodo de uso  produto*/
+  div.produto-title-text-uso{
+    max-width: 100%;            /* 831,6px / 831,6px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  h3.produto-descricao-title{
+    font-size: 1.1em;           /* 17.6px / 16px = 1.1em */
+    text-align: justify;
+    letter-spacing: 0px;
+  }
+  p.text-produto-descricao{
+    font-size: 0.875em;
+  }
+
+  h3.produto-modo-uso-title{
+    font-size: 1.1em;           /* 17.6px / 16px = 1.1em */
+    text-align: justify;
+    letter-spacing: 0px;
+  }
+  p.text-produto-uso-desc{
+    font-size: 0.875em;
+  }
+
+}
+
+/*************************************************************************
+480px – Smartphones no formato paisagem(landscape) com tela pequena
+*************************************************************************/
+@media screen and (min-width: 321px) and (max-width: 480px){
+   /* section entre o cabeçalho e o rodapé-
+   contém o conteúdo proncipal da page */
+  section.main-content-page{
+    width: 93%;        /* 297.6px/320px = 93%*/
+    height: auto;
+  }
+
+  header.article-header-produtos{
+    height: auto;
+    width: 100%;         /* 240px / 1200px = 20% */
+  }
+
+  h1#header-intro{
+    font-size: 2em;     /* 32px / 16px = 2em */
+  }
+
+  /*  aside pertence ao à seção principal 'main-content-page'  */
+  aside.categoria-produtos{
+    width: 100%;            /* 320px / 320px = 100% */
+    position: relative;
+   /* margin-top: 100%;*/
+    margin-top: 0px; /*430%; */
+    margin-left: 0%;
+    margin-right: 0%;
+
+  }
+
+  /* As pages individuas de produtos */
+  article.article-content-produtos-single{
+    width: 100%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0px;  /*-463%;  */
+  }
+
+  /* cabeçalho das pages individuas de produtos */
+  section.article-header-produtos-single{
+    width: 100%;        /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+   /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.3em;             /* 20,8px / 16px = 1.3em*/
+    margin: 0%;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder{
+    /*width:81.25%;     /* 260px / 320px = 81.25%
+                   (esta porcentagem é q corresponde à real tam da image)*/
+    margin-top: -30px;
+    /*margin: auto;*/
+    text-align: center;
+    width: 100%;
+  }
+
+  /* torna as imagens flexíveis */
+  div.image-holder img{
+    max-width: 100%;           /* 842.4px / 842.4px = 100%. define a largura máxima em até 100%*/
+    max-height: 100%;          /* 260px / 260px = 100%; */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-descricao-uso{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 10%;    /* margin-top: -28%; */
+  }
+
+  /* divisão do título e descrição do produto*/
+  div.produto-title-text-desc{
+    /* border: 1px solid black; */
+    max-width: 100%;            /* 831,6px / 831,6px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /*  título de descrição do produto de nível 3*/
+  h3.produto-descricao-title{
+    font-size: 1.1em;           /* 17.6px / 16px = 1.1em */
+    text-align: justify;
+  }
+  p.text-produto-descricao{
+    font-size: 0.875em;
+  }
+  /*  título de modo de uso do produto de nível 3*/
+  h3.produto-modo-uso-title{
+    font-size: 1.1em;           /* 17.6px / 16px = 1.1em */
+    text-align: justify;
+  }
+  p.text-produto-uso-desc{
+    font-size: 0.875em;
+  }
+}
+
+/*******************************************************************
+768px – Tablets no formato retrato(portrait), como o iPad
+*******************************************************************/
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+  section.main-content-page{
+    width: 93%;        /* 297.6px/320px = 93%*/
+    height: auto;
+  }
+
+  header.article-header-produtos{
+    height: auto;
+    width: 100%;         /* 240px / 1200px = 20% */
+
+  }
+
+  h1#header-intro{
+    font-size: 2.5em;     /* 40px / 16px = 2.5em */
+  }
+
+  /*  aside pertence ao à seção principal 'main-content-page'  */
+  aside.categoria-produtos{
+    width: 100%;            /* 320px / 320px = 100% */
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* As pages individuas de produtos */
+  article.article-content-produtos-single{
+    width: 100%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0px;
+  }
+
+  /* cabeçalho das pages individuas de produtos */
+  section.article-header-produtos-single{
+    width: 100%;        /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+   /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.8em;             /* 28,8px / 16px = 1.8em*/
+    margin: 0%;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder{
+    /*width:81.25%;     /* 260px / 320px = 81.25%
+                   (esta porcentagem é q corresponde à real tam da image)*/
+    margin-top: -30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* torna as imagens flexíveis */
+  div.image-holder img{
+    max-width: 100%;           /* 842.4px / 842.4px = 100%. define a largura máxima em até 100%*/
+    max-height: 100%;          /* 260px / 260px = 100%; */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-descricao-uso{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 10%;    /* margin-top: -28%; */
+  }
+
+  /* divisão do título e descrição do produto*/
+  div.produto-title-text-desc{
+    max-width: 100%;            /* 831,6px / 831,6px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /*  título de descrição do produto de nível 3*/
+  h3.produto-descricao-title{
+    font-size: 1.5em;           /* 17.6px / 16px = 1.1em */
+    text-align: justify;
+  }
+
+  /*  título de modo de uso do produto de nível 3*/
+  h3.produto-modo-uso-title{
+    font-size: 1.5em;           /* 17.6px / 16px = 1.1em */
+    text-align: justify;
+  }
+
+}
+/*******************************************************************
+960px – Tablets no formato paisagem(ladscape)
+e alguns monitores mais antigos
+********************************************************************/
+@media screen and (min-width: 769px) and (max-width: 1334px){
+  section.main-content-page{
+    width: 93%;        /* 297.6px/320px = 93%*/
+    height: auto;
+  }
+
+  header.article-header-produtos{
+    height: auto;
+    width: 100%;         /* 240px / 1200px = 20% */
+    margin-left: 1%;
+  }
+
+  h1#header-intro{
+    font-size: 2.5em;     /* 40px / 16px = 2.5em */
+  }
+
+  /*  aside pertence ao à seção principal 'main-content-page'  */
+  aside.categoria-produtos{
+    max-width: 260px;  /*40.6524577311%;*/  /* 33.8101430429% */
+    width:26%;            /* 240px / 960px = 25% */
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 1%;
+    margin-bottom : 0px;
+  }
+
+   /* As pages individuas de produtos */
+  article.article-content-produtos-single{
+    width: 70%;           /* 320px / 320px = 100%*/
+    margin-right: -20px;
+    margin-top: 0px;  /*-463%;  */
+    margin-left: 30%;
+  }
+
+  /* cabeçalho das pages individuas de produtos */
+  section.article-header-produtos-single{
+    width: 100%;        /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: -42%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+   /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.8em;             /* 28,8px / 16px = 1.8em*/
+    margin: 0%;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder{
+    margin-top: -30px;
+    text-align: left;
+    width: 40.6524577311%; /*210px;*/
+    height: 260px;
+    margin-left: -42%;
+    position: absolute;
+    display: block;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-descricao-uso{
+    width: 98%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-left: 0%;
+    margin-top: -30px;    /* margin-top: -28%; */
+    position: relative;
+  }
+
+  /* divisão do título e descrição do produto*/
+  div.produto-title-text-desc{
+    /* border: 1px solid black; */
+    max-width: 100%;            /* 831,6px / 831,6px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /*  título de descrição do produto de nível 3*/
+  h3.produto-descricao-title{
+    font-size: 1.5em;           /* 17.6px / 16px = 1.1em */
+    text-align: justify;
+  }
+
+  /*  título de modo de uso do produto de nível 3*/
+  h3.produto-modo-uso-title{
+    font-size: 1.5em;           /* 17.6px / 16px = 1.1em */
+    text-align: justify;
+  }
+}

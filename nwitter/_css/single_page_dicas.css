@@ -1,0 +1,808 @@
+/*
+ESTE ARQUIVO  TRATA ESTILO DAS PAGES INDIVIVUAIS DAS DICAS
+-----------------------------------------------------------
+
+UTF-8 (8-bit Unicode Transformation Format)
+é um tipo de codificação Unicode de comprimento variável
+criado por Ken Thompson e Rob Pike.
+Pode representar qualquer caracter universal padrão do Unicode,
+sendo também compatível com o ASCII.
+*/
+@charset "UTF-8";
+
+/* Utilizando fonte personalizada 1, Alegreya Sans SC */
+@font-face {
+  font-family: 'font-msf-pers_1';   /* fonte de títulos */
+  src: url("../../_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-ExtraBoldItalic.ttf");
+}
+
+/* utilizando fonte externa do google 1, Alegreya Sans, subtítulos */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+/*  font-family: 'Alegreya Sans', sans-serif;  */
+
+/* utilizando fonte externa do google 2, Raleway */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway');
+/*  font-family: 'Raleway', sans-serif;   */
+
+
+/*General*/
+
+*{
+  margin:0px;
+  padding:0px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+ul li{
+  display: inline-block;
+  margin-right: 25px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 500;
+
+  /*color: gray;*/
+  color: #fff;
+}
+ul.menu li a{
+ color: #fff;
+ text-decoration: none;
+ font-weight: 500;
+ letter-spacing: -1px;
+}
+/* efeito do menu ao passar o mouse por cima */
+ul.menu li a:hover{
+     color: rgba(255,255,6,.8);
+     font-weight: 900;
+}
+
+/*
+ul.menu li a:hover{
+  border-bottom: 2px solid yellow;
+  border-radius: 8px;
+  font-weight: bold;
+}
+*/
+
+/*Header*/
+
+.header{
+  height: 150px;
+  /*border-bottom:solid thin #dedede;*/
+  border-top:solid 5px seagreen;
+  background-color: #4CAF50;
+
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+/*  ----------------------- footer -----------------------------*/
+.footer{
+  border-top: solid 10px seagreen;
+  background: #007236;
+  border-bottom: solid 30px #006430;
+}
+.footer-copyright{
+  margin-top: 35px;
+  color: #fff;
+}
+.footer-copyright a{
+  text-decoration: none;
+  color: rgba(255,255,6,.7);
+}
+
+/*----------------------------------------------------------------
+                        PRODUTOS SINGLE PAGES
+ ----------------------------------------------------------------*/
+ /*marca o item do menu para indicar a page corrente*/
+ ul.menu li.active-page-menu a{
+   color: rgba(255,255,6,.9);
+   font-weight: 900;
+ }
+
+/* section entre o cabeçalho e o rodapé- contém o conteúdo proncipal da page */
+section.main-content-page{
+  /*border: 2px solid black;*/
+  margin: 0 auto;         /* centralizando o conteúdo no navegador*/
+  max-width: 1200px;      /* largura máxima do layout automática*/
+  width: 90%;             /* 1080px/1200px = 90%. largura do layout: para qualquer tela(resolução), 90% */
+/*  max-width: auto;
+  width: 100%; */
+  height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+  margin-bottom: 50px;
+}
+
+header.article-header-produtos{
+  width: 20%;
+  height: auto;
+  /*border: 1px solid blue;*/
+}
+/* cabeçalho de todas as pages */
+h1#header-intro{
+  text-transform: uppercase;
+  font-size: 3em;            /* 40px / 16px = 2.5em */
+  font-style: normal;
+  color: #007236;              /* rgb(0,255,0);*/
+  text-align: left;
+  margin-bottom: 40px;
+  margin-top: 40px;              /* 40px; */
+  font-weight: 900;
+  margin-left: auto;
+  letter-spacing: -5px;
+  font-family: 'Alegreya Sans', sans-serif;
+  /*font-family:  'font-msf-pers_1',  sans-ser*/
+}
+
+/* menu de opções de categorias de produtoslateral,
+ alinhado à esquerda*/
+aside.categoria-produtos{
+  /*border: 1px solid red;*/
+  width: 20%;            /* 240px / 1200px = 20% */
+  position: relative;   /*  aside pertence ao à seção principal 'main-content-page'  */
+}
+
+/* lista não ordenada de opçõs de produtos do menu aside(lateral) */
+ul.article-nav-links-produtos{
+  position: relative;
+  width: 100%;     /*240px / 240px = 100% */
+  height: auto;
+}
+
+/* nome de cada categatia de produtos no menu lateral */
+ul.article-nav-links-produtos li{
+  border-bottom: 1px dotted green;
+  max-width: 93%;      /* 223,2px / 240px = 93% */
+  width: 93%;          /* 223,2px / 240px = 93% */
+  padding: 8px;
+  display: block;
+  position: relative;
+}
+
+/* o nome de cada categatia de produtos no menu lateral,
+é lincado à página do produto */
+ul.article-nav-links-produtos li a{
+  display: block;
+  color: #808080;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 9pt;
+  font-weight: 500;
+  position: static;
+  max-width: 100%;      /* 240px / 240px = 100%*/
+  width: 100%;         /*  240px / 240px = 100%*/
+  height: auto;
+  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Alegreya Sans', sans-serif;*/
+/*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+}
+/*----- efeitos no link ao pousar o mouse sobre ------------  */
+
+ul.article-nav-links-produtos li a:hover{
+  text-decoration: none;        /* sem sublinhado no link*/
+  color: #000;
+}
+
+ul.article-nav-links-produtos li:hover{
+/*background-color: lightgray;*/  /* #d3d3d3;*/ /*cor de fundo cinza clara*/
+  border-left: 7px solid seagreen;
+}
+
+/*  Mantém uma cor de fundo sobre o item para indicar
+ o produto em visualização (o contexto)*/
+ul.article-nav-links-produtos li.active{
+  text-decoration: none;        /* sem sublinhado no link*/
+  /*background-color: lightgray;*/  /* #d3d3d3;*/ /*cor de fundo cinza clara*/
+  border-left: 7px solid seagreen;            /* sem borda*/
+
+}
+/* troca a cor da fonte pra VERDE SEAGREEN */
+ul.article-nav-links-produtos li.active a{
+  color: seagreen;
+  font-weight: 800;
+}
+/*----------------------------------------------------------*/
+
+/* As pages individuas de dicas */
+article.article-content-dica-single{
+  /*border: 1px dashed red;*/
+  max-width: 100%;            /* 1080px / 1080px = 100% */
+  width: 77%;                 /* 864px / 1080px = 80%-3% = 77%(831.6px) */
+  height: auto;
+  margin-left: 23%;           /* 3% à esquerda(depois) do menu aside*/
+  margin-top: -155px;
+  margin-bottom: auto;
+}
+
+/* cabeçalho das pages individuas de dicas */
+section.article-header-produtos-single{
+  width: 91.5%;              /* 1080px / 1080px = 100% */
+  height: auto;
+  margin-top: auto;
+  margin-bottom:auto;
+  margin-left: 0px;
+  /*border: 1px solid black;*/
+}
+
+/* nome do produto */
+h2.name-produto-single{
+  width: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 2em;             /* 28,8px / 16px = 1.8em*/
+  text-transform: uppercase;
+  font-style: normal;
+  color: #007236;
+  text-align: left;
+  margin-top: 0%;
+  font-weight:900;
+  letter-spacing: -2px;
+  margin-left: auto;
+  font-family: 'Alegreya Sans', sans-serif;
+  /*font-family:  'font-msf-pers_1',  sans-serif;*/
+  /*font-family: 'Raleway', sans-serif;*/
+}
+
+/* divisão que contém a imagem do produto*/
+div.image-holder-dicas{
+  width: 100%;  /*21019721%;         /* 848px / 831.6px = 101,9721019721% */
+  height: 364px;
+}
+
+/* torna as imagens flexíveis */
+div.image-holder-dicas figure img{
+  max-width: 100%;              /* 848px / 848px = 100%. define a largura máxima em até 100%*/
+  max-height: 100%;            /* 364px / 364px = 100% */
+}
+
+/* define a alrgura stática da imagem */
+div.image-holder-dicas figure{
+ /* width: 86.66666667%; */
+  width: 100%;                   /* 848px / 848px = 100% largura da imagem igual a da div.image-holder*/
+  height: 100%;                  /* 364px / 848px = 42,9245283018*/
+}
+
+
+/* ---------------------------------------------------------------
+                      DICAS SINGLE PAGES
+-----------------------------------------------------------------*/
+
+/* section de dicas de uso do produtos */
+section.section-produto-dica-uso{
+  /*border: 1px solid blue;*/
+ /* max-width: 92%;  */            /* 831,6px / 831.6 = 100% */
+  min-width: 92%;
+  width: 92%;               /* 765,072px / 831.6px = 90% */
+  height: auto;
+  position: relative;
+  margin-left: 0%;
+  margin-top: 1%;            /* 25px;*/
+  margin-bottom: auto;
+  margin-right: 0%;
+}
+
+/* texto propriamente dito da dica */
+p.text-produto-dica{
+  text-align: justify;
+  line-height: 30px;
+  font-size: 1em;           /* 16px / 16px = 1em */
+  width: 100%;              /* 765,072px / 765,072px = 100% */
+  height: auto;
+  color: #808080;
+  margin-bottom: 30px;
+}
+
+/* *****************************************************************************
+            RWD- Responsive Web Design - Media Queries
+
+    320 pixel – Smartphones no formato retrato com tela pequena
+    480 pixel – Smartphones no formato paisagem com tela pequena
+    768 pixel – Tablets no formato retrato, como o iPad
+    960 pixel – Tablets no formato paisagem e alguns monitores mais antigos
+    1200 pixel – Desktops, notebooks com monitores widescreen
+
+*******************************************************************************/
+
+/*
+320px – Smartphones no formato retrato(portrait)com tela pequena
+*************************************************************************/
+@media screen and (max-width: 320px){
+  /* section entre o cabeçalho e o rodapé-
+   contém o conteúdo proncipal da page */
+  section.main-content-page{
+    width: 93%;        /* 297.6px/320px = 93%*/
+    height: auto;
+    padding-bottom: 38%; /* 130px; / 320pc = 46,875% */
+    margin-bottom: auto;
+  }
+
+  header.article-header-produtos{
+    width: 100%;         /* 240px / 1200px = 20% */
+    height: auto;
+    border: 1px solid transparent;
+  }
+
+  h1#header-intro{
+    font-size: 2em;     /* 32px / 16px = 2em */
+  }
+
+  /* ---------------------------------------------------------------------
+   aside pertence ao à seção principal 'main-content-page'
+      e, aqui funciona apenas pra o produto ciclone casa
+  */
+
+  aside.categoria-produtos{
+    width: 98%;            /* 320px / 320px = 100% */
+    position: relative;
+    margin-top: 110%;       /* 870px */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* As pages individuas de produtos */
+  article.article-content-dica-single{
+    width: 98%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: -400px;     /*-968px; /*-318%; */
+  }
+
+  /*------------------- cicloce casa -----------------------------*/
+  /* menu lateral do produto ciclone casa */
+  aside#aside-ciclone-casa-dica{
+    margin-top: 320px;
+  }
+
+  /* artigo do produto ciclone pro */
+  article#aside-ciclone-casa-dica-tittle{
+    width: 98%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: -420px;     /*-968px; /*-318%; */
+  }
+
+
+  /*------------------- cicloce pro -----------------------------*/
+  /* menu lateral do produto ciclone pro */
+  aside#aside-ciclone-pro-dica{
+    margin-top: 290px;
+  }
+
+  /* artigo do produto ciclone pro */
+  article#aside-ciclone-pro-dica-tittle{
+    width: 98%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: -390px;     /*-968px; /*-318%; */
+  }
+
+  /* ----------------------------------------------
+        menu lateral do produto limpa moto
+    ----------------------------------------------- */
+  aside#aside-limpa-moto-dica{
+    margin-top: 290px;
+  }
+
+  /* artigo do produto ciclone pro */
+  article#aside-limpa-moto-dica-tittle{
+    width: 98%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: -390px;     /*-968px; /*-318%; */
+  }
+  /*---------------------------------------------------------------*/
+  /* cabeçalho das pages individuas de produtos */
+  section.article-header-produtos-single{
+    width: 100%;          /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 15px;
+  }
+
+  /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.3em;             /* 20,8px / 16px = 1.3em*/
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder-dicas{
+    width: 100%;
+    height: 160px;
+    text-align: center;
+  }
+
+  /* torna as imagens flexíveis */
+  div.image-holder-dicas img{
+    max-width: 100%;           /* 842.4px / 842.4px = 100%. define a largura máxima em até 100%*/
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder-dicas figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-dica-uso{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 2%;    /* margin-top: -28%; */
+  }
+
+   /* seção de descrição e uso do produto */
+  section.section-produto-dica-uso p{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 2%;    /* margin-top: -28%; */
+  }
+
+}
+
+/*************************************************************************
+480px – Smartphones no formato paisagem(landscape) com tela pequena
+*************************************************************************/
+@media screen and (min-width: 321px) and (max-width: 480px){
+   /* section entre o cabeçalho e o rodapé-
+   contém o conteúdo proncipal da page */
+  section.main-content-page{
+    width: 93%;        /* 297.6px/320px = 93%*/
+    height: auto;
+    margin-bottom: auto;
+  }
+
+  header.article-header-produtos{
+    height: auto;
+    width: 100%;         /* 240px / 1200px = 20% */
+  }
+
+  h1#header-intro{
+    font-size: 2em;     /* 32px / 16px = 2em */
+  }
+
+  /*  aside pertence ao à seção principal 'main-content-page'  */
+  aside.categoria-produtos{
+    width: 99%;            /* 320px / 320px = 100% */
+    position: relative;
+    margin-top: 0px; /*430%; */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* As pages individuas de produtos */
+  article.article-content-dica-single{
+    width: 99%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0px;  /*-463%;  */
+    height: auto;
+  }
+
+  /* cabeçalho das pages individuas de produtos */
+  section.article-header-produtos-single{
+    width: 100%;        /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*border: 1px solid blue;*/
+  }
+
+   /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.3em;             /* 20,8px / 16px = 1.3em*/
+    margin: 0%;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder-dicas{
+    margin-top: 0px;
+    width: 100%;
+    height: 260px;
+  }
+
+  /* torna as imagens flexíveis */
+  div.image-holder-dicas img{
+    max-width: 100%;           /* 842.4px / 842.4px = 100%. define a largura máxima em até 100%*/
+    max-height: 100%;          /* 260px / 260px = 100%; */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder-dicas figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-dica-uso{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-top: 3%;    /* margin-top: -28%; */
+  }
+
+  /* texto propriamente dito da dica */
+  p.text-produto-dica{
+    text-align: justify;
+    font-size: 1em;           /* 16px / 16px = 1em */
+    width: 100%;             /* 765,072px / 765,072px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+}
+
+/*******************************************************************
+768px – Tablets no formato retrato(portrait), como o iPad
+*******************************************************************/
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+  section.main-content-page{
+    width: 93%;        /* 297.6px/320px = 93%*/
+    height: auto;
+    height: auto;
+    margin-bottom: auto;
+  }
+
+  header.article-header-produtos{
+    height: auto;
+    width: 100%;         /* 240px / 1200px = 20% */
+  }
+
+  h1#header-intro{
+    font-size: 2.5em;     /* 40px / 16px = 2.5em */
+  }
+
+  /*  aside pertence ao à seção principal 'main-content-page'  */
+  aside.categoria-produtos{
+    width: 99%;            /* 320px / 320px = 100% */
+    position: relative;
+    margin-top: 0px; /*430%; */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* As pages individuas de dicas */
+   article.article-content-dica-single{
+    width: 99%;           /* 320px / 320px = 100%*/
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0px;        /*-463%;  */
+  }
+
+  /* cabeçalho das pages individuas de dicas */
+  section.article-header-produtos-single{
+    width: 100%;        /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*border: 1px solid blue;*/
+  }
+
+   /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.8em;             /* 28,8px / 16px = 1.8em*/
+    margin: 0%;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder-dicas{
+    /*width:81.25%;     /* 260px / 320px = 81.25%
+                   (esta porcentagem é q corresponde à real tam da image)*/
+    margin-top: 0px;
+    text-align: center;
+    width: 100%;
+    height: 280px;
+  }
+
+  /* torna as imagens flexíveis */
+  div.image-holder-dicas img{
+    max-width: 100%;           /* 842.4px / 842.4px = 100%. define a largura máxima em até 100%*/
+    max-height: 100%;          /* 260px / 260px = 100%; */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder-dicas figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-dica-uso{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 3%;    /* margin-top: -28%; */
+  }
+
+  /* texto propriamente dito da dica */
+  p.text-produto-dica{
+    text-align: justify;
+    font-size: 1em;           /* 16px / 16px = 1em */
+    width: 100%;             /* 765,072px / 765,072px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+}
+/*******************************************************************
+960px – Tablets no formato paisagem(ladscape)
+e alguns monitores mais antigos
+********************************************************************/
+@media screen and (min-width: 769px) and (max-width: 960px){
+  section.main-content-page{
+    width: 93%;        /* 297.6px/320px = 93%*/
+    height: auto;
+  }
+
+  header.article-header-produtos{
+    height: auto;
+    width: 100%;         /* 240px / 1200px = 20% */
+  }
+
+  h1#header-intro{
+    font-size: 2.5em;     /* 40px / 16px = 2.5em */
+  }
+
+  /*  aside pertence ao à seção principal 'main-content-page'  */
+  aside.categoria-produtos{
+    width:28%;            /* 240px / 960px = 25% */
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 0%;
+    margin-bottom: 0px;
+  }
+
+   /* As pages individuas de produtos */
+  article.article-content-dica-single{
+    width: 68%;           /* 320px / 320px = 100%*/
+    margin-right: 0px;
+    margin-top: 0px;  /*-463%;  */
+    margin-left: 31%;
+  }
+
+  /* cabeçalho das pages individuas de produtos */
+  section.article-header-produtos-single{
+    width: 100%;        /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: -46%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+
+   /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.8em;             /* 28,8px / 16px = 1.8em*/
+    margin: 0%;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder-dicas{
+    margin-top: 0px;
+    text-align: left;
+    width: 100%; /*210px;*/
+    height: 260px;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder-dicas figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-dica-uso{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-top: 10px;
+  }
+    /* texto propriamente dito da dica */
+  p.text-produto-dica{
+    text-align: justify;
+    font-size: 1em;           /* 16px / 16px = 1em */
+    width: 100%;             /* 765,072px / 765,072px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+
+/*********************************************************************
+1200px – Desktops, notebooks com monitores widescreen,
+orientação paisagem
+*********************************************************************/
+@media screen and (min-width: 961px) and (max-width: 1334px) and (orientation: landscape){
+
+  section.main-content-page{
+    width: 93%;        /* 297.6px/320px = 93%*/
+    height: auto;
+  }
+
+  header.article-header-produtos{
+     width: 22%;         /* 240px / 1200px = 20% */
+     height: auto;
+
+  }
+
+  h1#header-intro{
+    font-size: 2.5em;     /* 40px / 16px = 2.5em */
+  }
+
+  /*  aside pertence ao à seção principal 'main-content-page'  */
+  aside.categoria-produtos{
+    width:22%;            /* 240px / 960px = 25% */
+    margin-top: 0%;
+    margin-left: 0%;
+    height: auto;
+  }
+
+  /* As pages individuas de produtos */
+  article.article-content-dica-single{
+    width: 76%;           /* 320px / 320px = 100%*/
+    margin-right: 0%;
+    margin-top: -128px;  /*-463%;  */
+    margin-left: 24%;
+    /*border: 2px solid pink;*/
+  }
+
+  /* cabeçalho das pages individuas de produtos */
+  section.article-header-produtos-single{
+    width: 99%;        /* 320px / 320px = 100%*/
+    height: auto;
+    margin-left: 0%;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    /*border: 2px solid black;*/
+  }
+
+   /* nome do produto */
+  h2.name-produto-single{
+    font-size: 1.8em;             /* 28,8px / 16px = 1.8em*/
+    margin: 0%;
+  }
+
+  /* divisão que contém a imagem do produto*/
+  div.image-holder-dicas{
+    margin-top: 0px;
+    text-align: left;
+    width: 100%;
+    height: 290px;
+    margin-left: 0%;
+    position: relative;
+  }
+
+  /* define a alrgura stática da imagem */
+  div.image-holder-dicas figure{
+    width: 100%;      /* 260px / 260px = 100% largura da imagem igual a da div.image-holder*/
+    height: 100%;
+  }
+
+  /* seção de descrição e uso do produto */
+  section.section-produto-dica-uso{
+    width: 100%;          /* 842.4px / 842,4px = 100% */
+    height: auto;
+    margin-top: 10px;
+  }
+  /* texto propriamente dito da dica */
+  p.text-produto-dica{
+    text-align: justify;
+    font-size: 1em;           /* 16px / 16px = 1em */
+    width: 100%;             /* 765,072px / 765,072px = 100% */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}

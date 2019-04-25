@@ -1,0 +1,828 @@
+/*
+ ESTE É O ARQUIVO DE ESTILO PARA A PAGE CONTATO
+-------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                                        FONTES
+-------------------------------------------------------------------------
+UTF-8 (8-bit Unicode Transformation Format)
+é um tipo de codificação Unicode de comprimento variável
+criado por Ken Thompson e Rob Pike.
+Pode representar qualquer caracter universal padrão do Unicode,
+sendo também compatível com o ASCII.
+*/
+@charset "UTF-8";
+
+/* Utilizando fonte personalizada 1, Alegreya Sans SC */
+@font-face {
+  font-family: 'font-msf-pers_1'; /* fonte de títulos */
+/*src: url("../_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf");*/
+/*  src: url("_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-LightItalic.ttf");*/
+}
+
+/* utilizando fonte externa do google 1, Alegreya Sans, subtítulos */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+/*  font-family: 'Alegreya Sans', sans-serif;  */
+
+/* utilizando fonte externa do google 2, Raleway */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway');
+/*  font-family: 'Raleway', sans-serif;   */
+
+/*-------------------------- END FONTS --------------------------------*/
+
+/*General*/
+
+*{
+  margin:0px;
+  padding:0px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+ul li{
+  display: inline-block;
+  margin-right: 25px;
+  font-family: arial;
+  font-weight: 200;
+  color: #fff;
+}
+ul.menu li a{
+ color: #FFFFFF;              /* define a cor de menu como sendo branco */
+ text-decoration: none;
+ font-weight: 500;
+ letter-spacing: -1px;
+}
+
+/* efeito do menu ao passar o mouse por cima */
+ul.menu li a:hover{
+  text-decoration: none;
+  color: rgba(255,255,6,.8);
+  font-weight: 900;
+}
+
+/*   NÃO APAGAR
+--------------------------------
+ul.menu li a:hover{
+  border-bottom: 2px solid yellow;
+  border-radius: 8px;
+  font-weight: bold;
+}
+ */
+/*Header*/
+
+.header{
+  height: 150px;
+  border-top:solid 5px seagreen;
+  background-color: #4CAF50;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*----------------------------------------------------------------------------*/
+/*marca o item do menu para indicar a page corrente*/
+ul.menu li.active-page-menu a{
+  color: rgba(255,255,6,.9);
+  font-weight: 900;
+}
+/*-----------------------------------------------------------
+                corpo do da page contato
+-----------------------------------------------------------*/
+
+/* section entre o cabeçalho e o rodapé,
+ contém o conteúdo proncipal desta page
+
+ 1.   largura máxima do layout automática 1200px
+ 2. largura do layout para qualquer tela(resolução)= 1080.
+ 1080px/1200px = 90%.
+ 3. define altura como automático pra contém quantos produtos forem necessários
+ 4.define margens  superior=0; infer = 30px; esquerda e direita = auto. com isso  centralizando o conteúdo no navegador.
+ 5.coloca um borda preta pra visualizar o posicionamento do layout
+ */
+
+section.main-content-page{
+  max-width: 1200px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto 30px auto;
+  /*border: 1px solid black;*/
+}
+
+/* cabeçalho da page contato */
+header.header-contact{
+  width: 100%;
+  height: auto;
+}
+
+/* cabeçalho em titulo de nível 1 para a page contato */
+h1.header-intro{
+  text-transform: uppercase;
+  font-size: 3em;           /*  48px / 16px = 3em */
+  font-style: normal;
+  color: #007236;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-left: auto;
+  font-weight: 900;
+  letter-spacing: -5px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* area entre o título e rodapé,
+ contém texto introdutóeio aviso e o próprio  formulário */
+div.general-intro-form{
+  padding-bottom: 40px;
+  margin: 10px;
+  width: 90%;
+}
+
+/* contact text introduction */
+p#contact-intro{
+  text-align: justify;
+  font-style: normal;
+  font-size: 1.089em;         /* 19.2px / 16px = 0.875em | 14px / 16px = 0.875em */
+  margin-bottom: 30px;
+  line-height: 30px;
+  color: #808080;
+  font-family: 'Alegreya Sans', sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+}
+
+/* aviso de campos obragatórios */
+p#aviso{
+  text-align: justify;
+  font-style: normal;
+  font-size: 1em;
+  margin-bottom: 40px;
+  line-height: 30px;
+  width: auto;
+  height: auto;
+  letter-spacing: 0px;
+  color: #808080;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* contact fields positions and style goes here */
+div.contact-form-group{
+  height: auto;
+  max-width: 100%;
+  width: 35%;
+  margin-bottom: 20px;
+ }
+
+/* contact fields positions and style goes here */
+input.input-fd{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #007236;  /* NÃO COMENTAR */
+}
+
+div.contact-select-group{
+  width: 50%;
+  height: 40px;
+}
+
+/* opções de seleção de assuntos */
+div.contact-select-group h5#select-legend{
+  color: #808080;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* opções de assunto*/
+select#select-options{
+  width: 100%;
+  height: 100%;
+  height: 40px;
+  border: 1px solid #007236;    /* NÃO COMENTAR */
+}
+
+/* options for contact matter */
+select#select-options{
+  width: 100%;
+}
+
+/* textarea atyle and position */
+div.textarea-submit{
+  float: left;
+  position: relative;
+  margin-top: -295px;
+  margin-left: 38%;
+  max-width: 100%;
+  width: 46.269269269269269%;   /*500px / 1080px = 27.77777% */
+  height: 225px;
+}
+
+/* colca borba na area de mensagem */
+textarea#t-area{
+   border: 1px solid #007236;    /* NÃO COMENTAR */
+   width: 100%;
+   height: 100%;
+}
+
+/* SUBMIT BOTTON */
+input#botao-envio{
+  width:44%;        /* 100px / 225px= 44%*/
+  height:20%;       /*  45px / 225px = 20% */
+  position: relative;
+  margin-top:35px;
+  margin-right: 30px;
+  text-transform: uppercase;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: seagreen;
+  background-color: rgba(255,255,6,.1);
+  font-weight: 900;
+  border: 1px solid #007236;  /* NÃO COMENTAR */
+}
+
+/* ----------------------- hover style --------------------------*/
+
+/* campos de dados */
+input.input-fd:hover{
+  background-color: rgba(255,255,6,.1);
+}
+
+/* area de mensagem */
+textarea#t-area:hover{
+  background-color: rgba(255,255,6,.1);
+}
+
+/* botao de envio */
+input#botao-envio:hover{
+  color: rgb(255,255,255);
+  background-color:  #007236;
+}
+
+/*-------------------------------------------------------------------
+                      footer style
+--------------------------------------------------------------------*/
+
+.footer{
+  border-top: solid 10px seagreen;
+  background: #007236;
+  border-bottom: solid 30px #006430;
+}
+
+/* direitos autorais do dono site*/
+.footer-copyright{
+  margin-top: 35px;
+  color: #fff;
+}
+
+/* crédito a quem criou o site*/
+.footer-copyright a{
+  text-decoration: none;
+  color: rgba(255,255,6,.5);
+}
+
+/* ************************************************************************
+            RWD- Responsive Web Design - Media Queries
+
+
+    320 pixel – Smartphones no formato retrato com tela pequena
+    480 pixel – Smartphones no formato paisagem com tela pequena
+    768 pixel – Tablets no formato retrato, como o iPad
+    960 pixel – Tablets no formato paisagem e alguns monitores mais antigos
+    1200 pixel – Desktops, notebooks com monitores widescreen
+
+**************************************************************************/
+
+/*
+320px – Smartphones no formato retrato(portrait)com tela pequena
+*************************************************************************/
+@media screen and (max-width: 320px){ /**and (orientation:portrait){ */
+
+ /* section entre o cabeçalho e o rodapé,
+ contém o conteúdo proncipal desta page */
+
+  section.main-content-page{
+    width: 93%;             /* 297.6px/ 320px = 93%. largura do layout: para qualquer tela(resolução), 90% */
+    height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+  }
+  /* cabeçalho da page contato */
+  header.header-contact{
+    /*border: 1px solid red;*/
+    width: 100%;
+    margin-left: 0%;
+    height: auto;
+  }
+
+  /* cabeçalho em titulo de nível 1 para a page contato */
+  h1.header-intro{
+    width: 100%;
+    height: auto;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: -2px;
+    font-family: 'Alegreya Sans', sans-serif;
+  }
+
+  /* area entre o título e rodapé,
+   contém texto introdutóeio aviso e o próprio  formulário */
+  div.general-intro-form{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0%;
+    padding-bottom: 245px;
+  }
+
+  form.contac-form-group{
+    width: 100%;
+  }
+
+  /* contact text introduction */
+  p#contact-intro{
+    width: 100%;
+    text-align: justify;
+    font-size: 0.875em;
+  }
+
+  /* aviso de campos obragatórios */
+  p#aviso{
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    font-size: 0.875em;
+  }
+
+  /* contact fields positions and style goes here */
+  div.contact-form-group{
+    width: 295px;
+    height: 40px;
+  }
+
+  /* opções de seleção de assuntos */
+  div.contact-select-group h5#select-legend{
+    color: #808080;
+    font-size: 0.875em;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  /* contact fields positions and style goes here */
+  input.input-fd{
+    width: 100%;
+    height: 100%;
+  }
+
+  div.contact-select-group{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 20px;
+    /*border: 1px solid pink;*/
+  }
+
+  /* opções de assunto*/
+  select#select-options{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* divisão de contre de textarea e sua style and position */
+  div.textarea-submit{
+    width: 98%;
+    height: 120px;
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+
+  /* area de texto propriamente dita */
+  textarea#t-area{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* SUBMIT BOTTON */
+  input#botao-envio{
+    width: 100%;
+    margin-top: 25px;
+    border: 1px solid #007236;
+    height: 40px;
+  }
+
+}
+
+/***********************************************************************
+480px – Smartphones no formato paisagem(landscape) com tela pequena
+*************************************************************************/
+@media screen and (min-width: 321px) and (max-width: 480px){
+  /* section entre o cabeçalho e o rodapé,
+ contém o conteúdo proncipal desta page */
+  section.main-content-page{
+    width: 93%;             /* 297.6px/ 320px = 93%. largura do layout: para qualquer tela(resolução), 90% */
+    height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+    margin-bottom: auto;
+  }
+
+  /* cabeçalho da page contato */
+  header.header-contact{
+    /*border: 1px solid red;*/
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  /* cabeçalho em titulo de nível 1 para a page contato */
+  h1.header-intro{
+    width: 100%;
+    height: auto;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: -2px;
+    font-family: 'Alegreya Sans', sans-serif;
+  }
+
+  /* area entre o título e rodapé,
+   contém texto introdutóeio aviso e o próprio  formulário */
+  div.general-intro-form{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0%;
+    padding-bottom: 245px;
+  }
+
+  form.contac-form-group{
+    width: 100%;
+  }
+
+  /* contact text introduction */
+  p#contact-intro{
+    width: 100%;
+    text-align: justify;
+    font-size: 0.875em;
+  }
+
+  /* aviso de campos obragatórios */
+  p#aviso{
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    font-size: 0.875em;
+  }
+
+  /* contact fields positions and style goes here */
+  div.contact-form-group{
+    width: 99%;       /* 321px / 321px = 91,9003115% */
+    height: 40px;
+  }
+  div.contact-select-group h5#select-legend{
+    color: #808080;
+    font-size: 0.875em;
+    font-family: 'Raleway', sans-serif;
+  }
+  /* contact fields positions and style goes here */
+  input.input-fd{
+    width: 100%;
+    height: 100%;
+  }
+
+  div.contact-select-group{
+    width: 220px;
+    height: 40px;
+    margin-bottom: 20px;
+    /*border: 1px solid pink;*/
+  }
+
+  /* opções de assunto*/
+  select#select-options{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* divisão de contre de textarea e sua style and position */
+  div.textarea-submit{
+    width: 98%;
+    height: 130px;
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+
+  /* area de texto propriamente dita */
+  textarea#t-area{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* SUBMIT BOTTON */
+  input#botao-envio{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #007236;
+    height: 40px;
+    margin-top: 25px
+  }
+}
+
+/*******************************************************************
+768px – Tablets no formato retrato(portrait), como o iPad
+*******************************************************************/
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+  /* section entre o cabeçalho e o rodapé,
+ contém o conteúdo proncipal desta page */
+  section.main-content-page{
+    width: 93%;             /* 297.6px/ 320px = 93%. largura do layout: para qualquer tela(resolução), 90% */
+    height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+    margin-bottom: auto;
+  }
+
+  /* cabeçalho da page contato */
+  header.header-contact{
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  /* cabeçalho em titulo de nível 1 para a page contato */
+  h1.header-intro{
+    width: 100%;
+    height: auto;
+    font-size: 1.7em;
+    font-weight: 700;
+    letter-spacing: -2px;
+    font-family: 'Alegreya Sans', sans-serif;
+  }
+
+  /* area entre o título e rodapé,
+   contém texto introdutóeio aviso e o próprio  formulário */
+  div.general-intro-form{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0%;
+    padding-bottom: 255px;
+  }
+
+  form.contac-form-group{
+    width: 100%;
+  }
+
+  /* contact text introduction */
+  p#contact-intro{
+    width: 100%;
+    text-align: justify;
+    font-size: 1em;
+  }
+
+  /* aviso de campos obragatórios */
+  p#aviso{
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    font-size: 1em;
+  }
+
+  /* contact fields positions and style goes here */
+  div.contact-form-group{
+    width: 99%;       /* 321px / 321px = 91,9003115% */
+    height: 40px;
+  }
+
+  div.contact-select-group h5#select-legend{
+    color: #808080;
+    font-size: 0.9375em;
+  }
+
+
+  /* contact fields positions and style goes here */
+  input.input-fd{
+    width: 100%;
+    height: 100%;
+  }
+
+  div.contact-select-group{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* opções de assunto*/
+  select#select-options{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* divisão de contre de textarea e sua style and position */
+  div.textarea-submit{
+    width: 98%;
+    height: 150px;
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+
+  /* area de texto propriamente dita */
+  textarea#t-area{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* SUBMIT BOTTON */
+  input#botao-envio{
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid #007236;
+    height: 40px;
+  }
+
+}
+
+
+/*******************************************************************
+960px – Tablets no formato paisagem(ladscape)
+e alguns monitores mais antigos
+********************************************************************/
+@media screen and (min-width: 769px) and (max-width: 960px){
+
+  /* section entre o cabeçalho e o rodapé,
+ contém o conteúdo proncipal desta page */
+  section.main-content-page{
+    width: 93%;             /* 297.6px/ 320px = 93%. largura do layout: para qualquer tela(resolução), 90% */
+    height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+    margin-bottom: auto;
+  }
+
+  /* cabeçalho da page contato */
+  header.header-contact{
+    /*border: 1px solid red;*/
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  /* cabeçalho em titulo de nível 1 para a page contato */
+  h1.header-intro{
+    width: 100%;
+    height: auto;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -2px;
+  }
+
+  /* area entre o título e rodapé,
+   contém texto introdutóeio aviso e o próprio  formulário */
+  div.general-intro-form{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0%;
+    padding-bottom: 50px;
+  }
+
+  form.contac-form-group{
+    width: 100%;
+  }
+
+  /* contact text introduction */
+  p#contact-intro{
+    width: 100%;
+    text-align: justify;
+  }
+
+  /* aviso de campos obragatórios */
+  p#aviso{
+    width: 100%;
+    height: auto;
+    text-align: justify;
+  }
+
+  /* contact fields positions and style goes here */
+  div.contact-form-group{
+    width: 41%;       /* 300px / 769px = 39,0117035110% */
+    height: 40px;
+  }
+
+  /* contact fields positions and style goes here */
+  input.input-fd{
+    width: 100%;
+    height: 100%;
+  }
+
+  div.contact-select-group{
+    /*border: 1px solid blue;*/
+    width: 41%;
+    height: 40px;
+  }
+  /* opções de assunto*/
+  select#select-options{
+    width:100%;
+  }
+
+  /* divisão de contre de textarea e sua style and position */
+  div.textarea-submit{
+    width: 45%;
+    height: 220px;
+    float: right;
+    margin-top: -290px;
+    margin-right: 5%;
+  }
+
+  /* area de texto propriamente dita */
+  textarea#t-area{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* SUBMIT BOTTON */
+  input#botao-envio{
+    width: 100%;
+    margin-top: 35px;
+    border: 1px solid #007236;
+    height: 40px;
+  }
+}
+
+
+/*********************************************************************
+1200px – Desktops, notebooks com monitores widescreen,
+orientação paisagem
+*********************************************************************/
+@media screen and (min-width: 961px) and (max-width: 1920px) and (orientation: landscape){
+
+  /* section entre o cabeçalho e o rodapé,
+ contém o conteúdo proncipal desta page */
+  section.main-content-page{
+    width: 93%;             /* 297.6px/ 320px = 93%. largura do layout: para qualquer tela(resolução), 90% */
+    height: auto;           /* define altura como automático pa contém quantos produtos forem necessários  */
+    margin-bottom: auto;
+  }
+
+  /* cabeçalho da page contato */
+  header.header-contact{
+    /*border: 1px solid red;*/
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  /* cabeçalho em titulo de nível 1 para a page contato */
+  h1.header-intro{
+    width: 100%;
+    height: auto;
+    font-size: 3em;
+  }
+
+  /* area entre o título e rodapé,
+   contém texto introdutóeio aviso e o próprio  formulário */
+  div.general-intro-form{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0%;
+    padding-bottom: 50px;
+  }
+
+  form.contac-form-group{
+    width: 100%;
+  }
+
+  /* contact text introduction */
+  p#contact-intro{
+    width: 100%;
+    text-align: justify;
+  }
+
+  /* aviso de campos obragatórios */
+  p#aviso{
+    width: 100%;
+    height: auto;
+    text-align: justify;
+  }
+
+  /* contact fields positions and style goes here */
+  div.contact-form-group{
+    width: 41%;       /* 300px / 769px = 39,0117035110% */
+    height: 40px;
+  }
+
+  /* contact fields positions and style goes here */
+  input.input-fd{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* conteiner  de seletor de opções de assunto*/
+  div.contact-select-group{
+      width: 25%;
+      height: 50px;
+      /*border: 1px solid blue;*/
+  }
+
+  /* opções de assunto*/
+  select#select-options{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* divisão de contre de textarea e sua style and position */
+  div.textarea-submit{
+    width: 40%;
+    height: 220px;
+    float: right;
+    margin-top: -290px;
+    margin-right: 10%;
+  }
+
+  /* area de texto propriamente dita */
+  textarea#t-area{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* SUBMIT BOTTON */
+  input#botao-envio{
+    width: 50%;
+    margin-top: 35px;
+    border: 1px solid #007236;
+    height: 45px;
+    margin-right: 0%;
+    float: right;
+  }
+}

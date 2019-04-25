@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sobre</title>
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../nwitter/_css/about_page.css">
+    <link rel="shortcut icon" type="image/png" href="../_images/favicon_msf.png" />
+  <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjPRaWTiaGK5QSbJHF_HZw_2g1ty5dZuA&callback=myMap"></script>-->
+</head>
+<body>
+  <!--
+
+  -->
+<section class = "header">
+  <div class = "logo">
+    <a href="../home.html" title="MSF-Brasil, Amigo do meio ambiente" alt="logotipo MSF-Brasil">
+      <img src = "../_images/Logo_5.png" width="125" height="114"  style="position:relative; float:left; left:150px; top:15px;">
+    </a>
+  </div>
+  <div class = "menu" style="float:right; position:relative; margin-right:10%; top:100px;">
+    <ul class="menu">
+      <li><a href="../home.html">INÍCIO</a></li>
+      <li><a href="produtos.html">PRODUTOS</a></li>
+      <li class="active-page-menu"><a href="#">QUEM SOMOS</a></li>
+      <li><a href="dicas.html">DICAS</a></li>
+      <li><a href="contato.html">CONTATO</a></li>
+    </ul>
+  </div>
+</section>
+<!--
+
+-->
+<!-- section geral q contém todos os itens de produtos -->
+<section class="main-content-page">
+     <header class="header-about">
+          <h1 id="header-intro">Quem somos</h1>
+     </header>
+     <figure id="image-holder-about">
+          <a href="../home.html">
+            <img src = "../_images/about.png" title="MSF-Brasil, Amigo do meio ambiente"
+            alt="logotipo MSF-Brasil" width="auto" height="auto">
+          </a>
+     </figure>
+     <section  class="section-about-text-intro">
+        <p id="about-text-intro">
+          <strong>A MSF PRODUTOS DE LIMPEZA DO BRASIL</strong>
+            Foi criada com o objetivo de desenvolver produtos de limpeza,
+            de alto rendimento e eficiência, proporcionando além de uma limpeza de alta performance,
+            proteção ao usuário e ao meio ambiente, redução de custos,
+            e versatilidade, e uso mínimo de água.
+            <br><br>
+            São produtos altamente concentrados e desenvolvidos com materiais primas especiais
+            e biodegradáveis, suas embalagens são práticas com objetivo de facilitar a logística e manuseio.
+            <br><br>
+            Países da Europa e USA, estão adotando essas tecnologias com visão futurística,
+            pois a redução do consumo de água diminui de ponta a ponta,
+            do fabricante ao consumidor. O meio ambiente agradece.
+            <br><br>
+            Visite-nos em Rua Soldado Gentil Guimarães, 8 B, Parque Novo Mundo,São Paulo-SP. <br> <strong>CEP:</strong> 02144-010.
+            <br><br>
+            Atenciosamente,
+            <br><br>
+            <em>Adm.:(11) 2209-1611 </em>
+        </p>
+     </section>
+</section>
+<!-- END MAIN CONTENT PAGE -->
+
+
+<!--***************************************************** -->
+ <div id="map-container" style="width:100%;height:500px;"></div>
+ <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCjPRaWTiaGK5QSbJHF_HZw_2g1ty5dZuA&amp;sensor=false"></script>
+<section  id="map"  class = "map">
+     <!--<iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3981.5573810637657!2d-40.34712470555725!3d-3.6876589397340283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b4e2c2771451759!2zVGhlYXRybyBTw6NvIEpvw6Nv!5e0!3m2!1spt-BR!2sbr!4v1487253954517"
+        width="100%" height="500" frameborder="0" style="border:0" allowfullscreen>
+     </iframe>-->
+</section>
+<script>
+function init_map() {
+   var var_location = new google.maps.LatLng(-23.5026287,-46.5691808);
+
+       var var_mapoptions = {
+         center: var_location,
+         zoom: 16,
+         disableDoubleClickZoom: true,
+         scrollwheel: false
+       };
+
+   var var_marker = new google.maps.Marker({
+     position: var_location,
+     map: var_map,
+     title:"Venice"});
+
+       var var_map = new google.maps.Map(document.getElementById("map-container"),
+           var_mapoptions);
+
+   var_marker.setMap(var_map);
+
+     }
+
+     google.maps.event.addDomListener(window, 'load', init_map);
+
+   </script>
+
+<!-- **************** FOOTER ************************* -->
+<section class = "footer" style="height:300px;">
+  <div class = "icon" align = "center">
+    <a href="../home.html" title="MSF-Brasil, Amigo do meio ambiente" alt="logotipo MSF-Brasil"><img src = "../_images/logo_3.png"  width="115" height="104" style = "margin-top:45px;"></a>
+  </div>
+  <div align="center" style = "margin-top:25px;">
+    <ul class="menu" id="menu-bottom-320-767">
+      <li><a href="../home.html">INÍCIO</a></li>
+      <li><a href="produtos.html">PRODUTOS</a></li>
+      <li class="active-page-menu"><a href="#">QUEM SOMOS</a></li>
+      <li><a href="dicas.html">DICAS</a></li>
+      <li><a href="contato.html">CONTATO</a></li>
+    </ul>
+  </div>
+
+<!-- ***************COPYRIGHT **********/*****-->
+  <div class="footer-copyright" align="center" id="copyright">
+    <p>Copyright &copy MSF Brasil. Todos os direitos reservados. | Desenvolvido por <a href="http://www.loadingjr.com.br/" target="_blank">Loading Desenvolvimento Jr</a></p>
+  </div>
+</section>
+</body>
+</html>

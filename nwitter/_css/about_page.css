@@ -1,0 +1,354 @@
+/*
+ ESTE É O ARQUIVO DE ESTILO PARA A QUEM SOMOS
+
+ -------------------------------------------------------------------------
+                                FONTES
+--------------------------------------------------------------------------
+UTF-8 (8-bit Unicode Transformation Format)
+é um tipo de codificação Unicode de comprimento variável
+criado por Ken Thompson e Rob Pike.
+Pode representar qualquer caracter universal padrão do Unicode,
+sendo também compatível com o ASCII.
+*/
+@charset "UTF-8";
+
+/* Utilizando fonte personalizada 1, Alegreya Sans SC */
+@font-face {
+  font-family: 'font-msf-pers_1'; /* fonte de títulos */
+/*src: url("../_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf");*/
+  src: url("_fonts/_Alegreya_Sans_SC/AlegreyaSansSC-Medium.ttf");
+}
+
+/* utilizando fonte externa do google 1, Alegreya Sans, subtítulos */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+/*  font-family: 'Alegreya Sans', sans-serif;  */
+
+/* utilizando fonte externa do google 2, Raleway */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway');
+/*  font-family: 'Raleway', sans-serif;   */
+
+/*-------------------------  END FONTS --------------------------------*/
+
+
+/*General*/
+*{
+     margin:0px;
+     padding:0px;
+     font-family: 'Alegreya Sans', sans-serif;
+}
+
+ul li{
+     display: inline-block;
+     margin-right: 25px;
+     font-family: 'Alegreya Sans', sans-serif;
+     font-weight: 500;
+     color: #FFF;
+}
+ul.menu li a{
+     color: #FFF;
+     text-decoration: none;
+     font-weight: 500;
+     letter-spacing: -1px;
+}
+
+/* efeito do menu ao passar o mouse por cima */
+ul.menu li a:hover{
+     color: rgba(255,255,6,.8);
+     font-weight: 900;
+}
+/*
+ul.menu li a:hover{
+  border-bottom: 2px solid yellow;
+  border-radius: 8px;
+  font-weight: bold;
+}
+*/
+/*Header*/
+
+.header{
+     height: 150px;
+     border-top:solid 5px seagreen;
+     background-color: #4CAF50;
+     box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 17px 50px        rgba(0,0,0,0.19);
+}
+/* ---------------------------------------------------------------------------
+
+marca o item do menu para indicar a page corrente*/
+ul.menu li.active-page-menu a{
+  color: rgba(255,255,6,.9);
+  font-weight: 900;
+}
+
+/*--------------------------------------------------------------------
+                                content section
+-------------------------------------------------------------------------
+
+1.   largura máxima do layout automática 1200px
+2. largura do layout para qualquer tela(resolução)= 1080.
+1080px/1200px = 90%.
+3. define altura como automático pra contém quantos produtos forem necessários
+4.define margens  superior=0; infer = 30px; esquerda e direita = auto. com isso  centralizando o conteúdo no navegador.
+5.coloca um borda preta pra visualizar o posicionamento do layout
+*/
+section.main-content-page{
+     max-width: 1200px;
+     width: 90%;
+     height: auto;
+     margin: 0 auto 30px auto;
+}
+
+/* cabeçalho da page quem somos */
+header.header-about{
+     max-width: 100%;
+     width: 70.8333333333%;   /*850px / 1200px = 70.83333333%*/;
+     margin-left: 14%;
+     height: auto;
+}
+
+/* cabeçalho em titulo de nível 1 para a page contato */
+h1#header-intro{
+     text-transform: uppercase;
+     font-size: 3em;         /* 48px / 16px = 3em*/
+     font-style: normal;
+     color: #007236;
+     text-align: left;
+     padding-top: 40px;
+     padding-bottom: 40px;
+     margin-left: auto;
+     font-weight: 900;
+     letter-spacing: -5px;
+     position: relative;
+}
+/* conteiner da imagem, logo da empresa */
+figure#image-holder-about{
+     max-width: 100%;
+     width:  70.8333333333%;
+     height: auto;
+     margin-left: 14%;
+     text-align: center;
+}
+
+/* torma a imagem flexivel */
+figure#image-holder-about img{
+     max-width: 100%;
+}
+
+/* conteiner do texto  sobre  */
+section.section-about-text-intro{
+     width: 70.8333333333%;    /*850px / 1200px = 70.83333333%*/;
+     height: auto;
+     margin-left: 14%;
+     /*background-color: rgba(0,255,0,.1);*/
+}
+
+/* texto sobte a empresa propriamente dito */
+p#about-text-intro{
+     width: 99%;
+     margin: 20px  auto 30px auto;
+     position: relative;
+     text-align: justify;
+     color: #808080;      /* Lightgrey; /*rgba(0,100,0, .5)  */;
+     font-family: 'font-msf-pers_1', sans-serif;
+     /*font-family: 'Raleway', sans-serif;*/
+     font-size:  1.125em;          /* 18px / 16px =1.125em  */
+     font-weight: 400;
+     line-height: 30px;
+}
+
+/*----------------------------------------------------------------
+                    CORPO DA PAGE AQUI
+
+------------------------------------------------------------------
+                      footer style
+------------------------------------------------------------------*/
+
+.footer{
+  /*border-top:solid thin #dedede;*/
+  border-top: solid 10px seagreen;
+  background: #007236;
+  border-bottom: solid 30px #006430;
+}
+
+/* direitos autorais do dono site*/
+.footer-copyright{
+  margin-top: 35px;
+  color: #fff;
+}
+
+/* crédito a quem criou o site*/
+.footer-copyright a{
+  text-decoration: none;
+  color: rgba(255,255,6,.7);
+}
+
+/* ************************************************************************
+            RWD - Responsive Web Design - Media Queries
+            PAGE: ABOUT
+            GATE: 21/03/2017
+
+    320 pixel – Smartphones no formato retrato com tela pequena
+    480 pixel – Smartphones no formato paisagem com tela pequena
+    768 pixel – Tablets no formato retrato, como o iPad
+    960 pixel – Tablets no formato paisagem e alguns monitores mais antigos
+    1200 pixel – Desktops, notebooks com monitores widescreen
+
+**************************************************************************/
+
+/*
+320px – Smartphones no formato retrato(portrait)com tela pequena
+*************************************************************************/
+@media screen and (max-width: 320px){
+     section.main-content-page{
+        width: 93%;        /* 297,6px / 320px = 93% */
+     }
+     header.header-about{
+        width: 100%;         /*850px / 1200px = 70.83333333%*/
+        margin: auto 0;
+     }
+     h1#header-intro{
+        font-size:  1.3em;     /* 20.8px / 16px = 1.3em*/
+        font-weight: 700;
+        letter-spacing: -2px;
+        font-family: 'Alegreya Sans', sans-serif;
+     }
+     figure#image-holder-about{
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+     }
+     section.section-about-text-intro{
+        width: 98%;    /*850px / 1200px = 70.83333333%*/;
+        height: auto;
+        margin: auto;
+        background-color: transparent;
+    }
+    p#about-text-intro{
+         width: 98%;
+         color: #808080; /*rgba(0,100,0, .5)  */;
+         font-family: 'Raleway', sans-serif;
+         font-size:  0.875em;          /* 14px / 16px =1,125em  */
+         line-height: 25px;
+    }
+    ul#menu-bottom-320-767{
+         border-top: 2px solid yellow;
+         margin-top: 15px;
+         padding-top: 15px;
+    }
+}
+
+/*************************************************************************
+480px – Smartphones no formato paisagem(landscape) com tela pequena
+*************************************************************************/
+@media screen and (min-width: 321px) and (max-width: 480px){
+     section.main-content-page{
+          width: 93%;        /* 297,6px / 320px = 93% */
+     }
+     header.header-about{
+          width: 100%;         /*850px / 1200px = 70.83333333%*/
+          margin: auto 0;
+     }
+     h1#header-intro{
+          font-size:  1.4em;     /* 20.8px / 16px = 1.3em*/
+          font-weight: 700;
+          letter-spacing: -2px;
+          font-family: 'Alegreya Sans', sans-serif;
+     }
+     figure#image-holder-about{
+          width: 65%;
+          margin: 0 auto;
+          text-align: center;
+     }
+     section.section-about-text-intro{
+          width: 98%;    /*850px / 1200px = 70.83333333%*/;
+          height: auto;
+          margin: auto;
+          background-color: transparent;
+    }
+     p#about-text-intro{
+         width: 98%;
+         color: #808080; /*rgba(0,100,0, .5)  */;
+         font-family: 'Raleway', sans-serif;
+         font-size:  1em;          /* 16px / 16px =1em  */
+         line-height: 25px;
+    }
+    ul#menu-bottom-320-767{
+         border-top: 2px solid yellow;
+         margin-top: 15px;
+         padding-top: 15px;
+    }
+}
+
+/*******************************************************************
+768px – Tablets no formato retrato(portrait), como o iPad
+*******************************************************************/
+@media screen and (min-width: 481px) and (max-width: 768px){
+     section.main-content-page{
+          width: 93%;        /* 297,6px / 320px = 93% */
+     }
+     header.header-about{
+          width: 100%;            /*481px / 481px = 70.83333333%*/
+          margin: auto 0;
+     }
+     h1#header-intro{
+          font-size: 2em;         /* 32px / 16px = 2em*/
+          font-weight: 700;
+          letter-spacing: -5px;
+          font-family: 'Alegreya Sans', sans-serif;
+     }
+     figure#image-holder-about{
+          width: 68%;
+          margin: 0 auto;
+          text-align: center;
+     }
+     section.section-about-text-intro{
+          width: 98%;    /*850px / 1200px = 70.83333333%*/;
+          height: auto;
+          margin: auto;
+          background-color: transparent;
+    }
+     p#about-text-intro{
+         width: 98%;
+         color: #808080; /*rgba(0,100,0, .5)  */;
+         font-family: 'Raleway', sans-serif;
+         font-size:  1em;          /* 18px / 16px =1,125em  */
+         line-height: 25px;
+
+    }
+}
+
+/*******************************************************************
+960px – Tablets no formato paisagem(ladscape)
+e alguns monitores mais antigos
+********************************************************************/
+@media screen and (min-width: 769px) and (max-width: 960px){
+     section.main-content-page{
+          width: 93%;        /* 297,6px / 320px = 93% */
+     }
+     header.header-about{
+          width: 100%;         /*850px / 1200px = 70.83333333%*/
+          margin: auto 0;
+     }
+     h1#header-intro{
+          font-size: 2.5em;         /* 20.8px / 16px = 1.3em*/
+          font-weight: 800;
+          letter-spacing: -5px;
+          font-family: 'Alegreya Sans', sans-serif;
+     }
+     figure#image-holder-about{
+          width: 68%;
+          margin: 0 auto;
+          text-align: center;
+     }
+     section.section-about-text-intro{
+          width: 98%;    /*850px / 1200px = 70.83333333%*/;
+          height: auto;
+          margin: auto;
+          background-color: transparent;
+    }
+     p#about-text-intro{
+         width: 98%;
+         color: #808080; /*rgba(0,100,0, .5)  */;
+         font-family: 'Raleway', sans-serif;
+         font-size:  1.125em;          /* 18px / 16px =1,125em  */
+    }
+}
